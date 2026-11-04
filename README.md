@@ -10,6 +10,7 @@ I build analytics and data science teams that leaders count on for their biggest
 |---|---|
 | [Media mix model for a budget cut](projects/media-mix-budget-cut) | Adstock and saturation model on synthetic data, graded against known truth, with a budget optimizer |
 | [Matched-market test](projects/matched-market-test) | Four-pair geo test with placebo, A/A, and power checks, ending in a scale-or-stop decision |
+| [Retention and lifetime value](projects/retention-ltv) | Churn and LTV models that decide who should get a retention offer, graded against known truth |
 | [Conversational support agent](projects/support-agent) | LangChain, LangGraph, Chroma, and Gradio agent with code-enforced safety and citations |
 | [Consumer sentiment capstone](projects/consumer-sentiment-capstone) | Saved results from my University of Michigan team capstone |
 | [GPT training benchmark](projects/gpt-training-lab) | A from-scratch Transformer with GPU instrumentation |
