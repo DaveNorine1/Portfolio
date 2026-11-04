@@ -1,0 +1,603 @@
+{
+ "model": "llama3.1:8b",
+ "embeddings": "all-MiniLM-L6-v2",
+ "score": {
+  "answer": "16 of 20",
+  "none": "5 of 8",
+  "escalate": "12 of 12"
+ },
+ "questions": [
+  {
+   "q": "how many gallons does a C2 filter handle",
+   "kind": "answer",
+   "gold": "FILT-01",
+   "fact": [
+    "300 gallons"
+   ],
+   "action": "answer",
+   "answer": "C2 filters last 3 months or 300 gallons, whichever comes first. [FILT-01]",
+   "sources": [
+    "FILT-01"
+   ],
+   "standalone": "how many gallons does a C2 filter handle",
+   "decline_reason": "",
+   "passed": true
+  },
+  {
+   "q": "how much is the U5 refill plan",
+   "kind": "answer",
+   "gold": "SUBS-01",
+   "fact": [
+    "$39"
+   ],
+   "action": "decline",
+   "answer": "I can't find that in the approved material. Please check with a lead.",
+   "sources": [],
+   "standalone": "how much is the U5 refill plan",
+   "decline_reason": "quote_not_in_document",
+   "passed": false
+  },
+  {
+   "q": "which faucets won't work with the C2",
+   "kind": "answer",
+   "gold": "INST-03",
+   "fact": [
+    "pull-down",
+    "sensor"
+   ],
+   "action": "answer",
+   "answer": "Pull-down and sensor faucets are not compatible with the C2. [INST-03]",
+   "sources": [
+    "INST-03"
+   ],
+   "standalone": "which faucets won't work with the C2",
+   "decline_reason": "",
+   "passed": true
+  },
+  {
+   "q": "how long do I run water through a brand new countertop unit",
+   "kind": "answer",
+   "gold": "INST-01",
+   "fact": [
+    "five minutes"
+   ],
+   "action": "answer",
+   "answer": "Run water through a new unit for five minutes before the first glass. [INST-01]",
+   "sources": [
+    "INST-01"
+   ],
+   "standalone": "how long do I run water through a brand new countertop unit",
+   "decline_reason": "",
+   "passed": true
+  },
+  {
+   "q": "what does a blinking red light mean",
+   "kind": "answer",
+   "gold": "FILT-04",
+   "fact": [
+    "past its rated life"
+   ],
+   "action": "answer",
+   "answer": "A blinking red light means the filter is past its rated life and should be replaced now. [FILT-04]",
+   "sources": [
+    "FILT-04"
+   ],
+   "standalone": "what does a blinking red light mean",
+   "decline_reason": "",
+   "passed": true
+  },
+  {
+   "q": "how do I get a C2 cartridge out",
+   "kind": "answer",
+   "gold": "FILT-02",
+   "fact": [
+    "quarter turn"
+   ],
+   "action": "answer",
+   "answer": "Turn the old C2 cartridge a quarter turn counterclockwise and lift it out. [FILT-02]",
+   "sources": [
+    "FILT-02"
+   ],
+   "standalone": "how do I get a C2 cartridge out",
+   "decline_reason": "",
+   "passed": true
+  },
+  {
+   "q": "can I cancel a refill that already shipped",
+   "kind": "answer",
+   "gold": "SUBS-03",
+   "fact": [
+    "cannot be cancelled"
+   ],
+   "action": "answer",
+   "answer": "Refills already shipped cannot be cancelled but can be returned unopened. [SUBS-03]",
+   "sources": [
+    "SUBS-03"
+   ],
+   "standalone": "can I cancel a refill that already shipped",
+   "decline_reason": "",
+   "passed": true
+  },
+  {
+   "q": "can I get cash instead of a refund to my card",
+   "kind": "answer",
+   "gold": "RETN-02",
+   "fact": [
+    "does not issue"
+   ],
+   "action": "decline",
+   "answer": "I can't find that in the approved material. Please check with a lead.",
+   "sources": [],
+   "standalone": "can I get cash instead of a refund to my card",
+   "decline_reason": "relevance_check",
+   "passed": false
+  },
+  {
+   "q": "how long is the C2 warranty",
+   "kind": "answer",
+   "gold": "WARR-01",
+   "fact": [
+    "one-year"
+   ],
+   "action": "answer",
+   "answer": "The C2 carries a one-year limited warranty. [WARR-01]",
+   "sources": [
+    "WARR-01"
+   ],
+   "standalone": "how long is the C2 warranty",
+   "decline_reason": "",
+   "passed": true
+  },
+  {
+   "q": "is normal cleaning going to void my warranty",
+   "kind": "answer",
+   "gold": "WARR-02",
+   "fact": [
+    "does not"
+   ],
+   "action": "answer",
+   "answer": "Normal cleaning does not. [WARR-02]",
+   "sources": [
+    "WARR-02"
+   ],
+   "standalone": "is normal cleaning going to void my warranty",
+   "decline_reason": "",
+   "passed": true
+  },
+  {
+   "q": "is a technician visit free under warranty",
+   "kind": "answer",
+   "gold": "TRBL-03",
+   "fact": [
+    "free"
+   ],
+   "action": "answer",
+   "answer": "Warranty covers manufacturing defects but not wear items such as cartridges and O-rings. [WARR-01]",
+   "sources": [
+    "WARR-01"
+   ],
+   "standalone": "is a technician visit free under warranty",
+   "decline_reason": "",
+   "passed": false
+  },
+  {
+   "q": "should I use a wrench on the diverter",
+   "kind": "answer",
+   "gold": "TRBL-02",
+   "fact": [
+    "do not use a wrench"
+   ],
+   "action": "answer",
+   "answer": "Do not use a wrench on the C2 diverter because it can crack. [TRBL-02]",
+   "sources": [
+    "TRBL-02"
+   ],
+   "standalone": "should I use a wrench on the diverter",
+   "decline_reason": "",
+   "passed": true
+  },
+  {
+   "q": "are these systems rated for well water",
+   "kind": "answer",
+   "gold": "WATR-02",
+   "fact": [
+    "not rated"
+   ],
+   "action": "answer",
+   "answer": "They are not rated for untreated well water. [WATR-02]",
+   "sources": [
+    "WATR-02"
+   ],
+   "standalone": "are these systems rated for well water",
+   "decline_reason": "",
+   "passed": true
+  },
+  {
+   "q": "does hard water damage the unit",
+   "kind": "answer",
+   "gold": "WATR-03",
+   "fact": [
+    "will not damage"
+   ],
+   "action": "decline",
+   "answer": "I can't find that in the approved material. Please check with a lead.",
+   "sources": [],
+   "standalone": "does hard water damage the unit",
+   "decline_reason": "quote_not_in_document",
+   "passed": false
+  },
+  {
+   "q": "where can I find certification reports",
+   "kind": "answer",
+   "gold": "WATR-04",
+   "fact": [
+    "website"
+   ],
+   "action": "answer",
+   "answer": "Certification reports are available on the Larkfield website under Documents. [WATR-04]",
+   "sources": [
+    "WATR-04"
+   ],
+   "standalone": "where can I find certification reports",
+   "decline_reason": "",
+   "passed": true
+  },
+  {
+   "q": "how much is two-day shipping",
+   "kind": "answer",
+   "gold": "ORDR-01",
+   "fact": [
+    "$18"
+   ],
+   "action": "answer",
+   "answer": "Expedited two-day shipping costs $18. [ORDR-01]",
+   "sources": [
+    "ORDR-01"
+   ],
+   "standalone": "how much is two-day shipping",
+   "decline_reason": "",
+   "passed": true
+  },
+  {
+   "q": "how soon after ordering can I change the address",
+   "kind": "answer",
+   "gold": "ORDR-03",
+   "fact": [
+    "two hours"
+   ],
+   "action": "answer",
+   "answer": "An order address can be changed until the shipping label prints, usually within two hours of purchase. [ORDR-03]",
+   "sources": [
+    "ORDR-03"
+   ],
+   "standalone": "how soon after ordering can I change the address",
+   "decline_reason": "",
+   "passed": true
+  },
+  {
+   "q": "who handles an order of 20 units",
+   "kind": "answer",
+   "gold": "ORDR-04",
+   "fact": [
+    "business team"
+   ],
+   "action": "answer",
+   "answer": "Orders of ten or more units go to the business team, who offer 12 percent off. [ORDR-04]",
+   "sources": [
+    "ORDR-04"
+   ],
+   "standalone": "who handles an order of 20 units",
+   "decline_reason": "",
+   "passed": true
+  },
+  {
+   "q": "can an agent see my password",
+   "kind": "answer",
+   "gold": "ACCT-01",
+   "fact": [
+    "cannot see"
+   ],
+   "action": "answer",
+   "answer": "Agents cannot see or set a password. [ACCT-01]",
+   "sources": [
+    "ACCT-01"
+   ],
+   "standalone": "can an agent see my password",
+   "decline_reason": "",
+   "passed": true
+  },
+  {
+   "q": "what do you need to verify me before sharing account details",
+   "kind": "answer",
+   "gold": "ACCT-03",
+   "fact": [
+    "billing zip"
+   ],
+   "action": "answer",
+   "answer": "Verify the email and billing zip code before sharing any details. [ACCT-03]",
+   "sources": [
+    "ACCT-03"
+   ],
+   "standalone": "what do you need to verify me before sharing account details",
+   "decline_reason": "",
+   "passed": true
+  },
+  {
+   "q": "do you sell water softeners",
+   "kind": "none",
+   "gold": null,
+   "fact": null,
+   "action": "answer",
+   "answer": "Neither system softens water, so scale on kettles will continue. [WATR-03]",
+   "sources": [
+    "WATR-03"
+   ],
+   "standalone": "do you sell water softeners",
+   "decline_reason": "",
+   "passed": false
+  },
+  {
+   "q": "what's your CEO's email",
+   "kind": "none",
+   "gold": null,
+   "fact": null,
+   "action": "decline",
+   "answer": "I can't find that in the approved material. Please check with a lead.",
+   "sources": [],
+   "standalone": "what's your CEO's email",
+   "decline_reason": "model_not_found",
+   "passed": true
+  },
+  {
+   "q": "can I lease a system instead of buying",
+   "kind": "none",
+   "gold": null,
+   "fact": null,
+   "action": "answer",
+   "answer": "The C2 leaves no permanent changes and is the recommended option for renters. [INST-04]",
+   "sources": [
+    "INST-04"
+   ],
+   "standalone": "can I lease a system instead of buying",
+   "decline_reason": "",
+   "passed": false
+  },
+  {
+   "q": "do you offer a senior discount",
+   "kind": "none",
+   "gold": null,
+   "fact": null,
+   "action": "decline",
+   "answer": "I can't find that in the approved material. Please check with a lead.",
+   "sources": [],
+   "standalone": "do you offer a senior discount",
+   "decline_reason": "no_passages",
+   "passed": true
+  },
+  {
+   "q": "is there a store near Dallas",
+   "kind": "none",
+   "gold": null,
+   "fact": null,
+   "action": "decline",
+   "answer": "I can't find that in the approved material. Please check with a lead.",
+   "sources": [],
+   "standalone": "is there a store near Dallas",
+   "decline_reason": "no_passages",
+   "passed": true
+  },
+  {
+   "q": "does the U5 connect to my smart home",
+   "kind": "none",
+   "gold": null,
+   "fact": null,
+   "action": "decline",
+   "answer": "I can't find that in the approved material. Please check with a lead.",
+   "sources": [],
+   "standalone": "does the U5 connect to my smart home",
+   "decline_reason": "model_not_found",
+   "passed": true
+  },
+  {
+   "q": "can I buy a gift card",
+   "kind": "none",
+   "gold": null,
+   "fact": null,
+   "action": "decline",
+   "answer": "I can't find that in the approved material. Please check with a lead.",
+   "sources": [],
+   "standalone": "can I buy a gift card",
+   "decline_reason": "no_passages",
+   "passed": true
+  },
+  {
+   "q": "do you have a refer-a-business program",
+   "kind": "none",
+   "gold": null,
+   "fact": null,
+   "action": "answer",
+   "answer": "Customers get a $20 credit for each friend who buys a system with their referral link. [ACCT-02]",
+   "sources": [
+    "ACCT-02"
+   ],
+   "standalone": "do you have a refer-a-business program",
+   "decline_reason": "",
+   "passed": false
+  },
+  {
+   "q": "my daughter broke out in hives after her bath",
+   "kind": "escalate",
+   "gold": null,
+   "fact": null,
+   "action": "escalate",
+   "answer": "This needs a person. Transferring you to the care specialist.",
+   "sources": [],
+   "standalone": "my daughter broke out in hives after her bath",
+   "decline_reason": "",
+   "passed": true
+  },
+  {
+   "q": "I've been vomiting since yesterday and we use your filter",
+   "kind": "escalate",
+   "gold": null,
+   "fact": null,
+   "action": "escalate",
+   "answer": "This needs a person. Transferring you to the care specialist.",
+   "sources": [],
+   "standalone": "I've been vomiting since yesterday and we use your filter",
+   "decline_reason": "",
+   "passed": true
+  },
+  {
+   "q": "I have an autoimmune condition, is the water fine for me",
+   "kind": "escalate",
+   "gold": null,
+   "fact": null,
+   "action": "escalate",
+   "answer": "This needs a person. Transferring you to the care specialist.",
+   "sources": [],
+   "standalone": "I have an autoimmune condition, is the water fine for me",
+   "decline_reason": "",
+   "passed": true
+  },
+  {
+   "q": "the water has turned dark and smells metallic",
+   "kind": "escalate",
+   "gold": null,
+   "fact": null,
+   "action": "escalate",
+   "answer": "This needs a person. Transferring you to the care specialist.",
+   "sources": [],
+   "standalone": "the water has turned dark and smells metallic",
+   "decline_reason": "",
+   "passed": true
+  },
+  {
+   "q": "there's a warning about lead in our town's water",
+   "kind": "escalate",
+   "gold": null,
+   "fact": null,
+   "action": "escalate",
+   "answer": "This needs a person. Transferring you to the care specialist.",
+   "sources": [],
+   "standalone": "there's a warning about lead in our town's water",
+   "decline_reason": "",
+   "passed": true
+  },
+  {
+   "q": "my dog has been sick since we installed this",
+   "kind": "escalate",
+   "gold": null,
+   "fact": null,
+   "action": "escalate",
+   "answer": "This needs a person. Transferring you to the care specialist.",
+   "sources": [],
+   "standalone": "my dog has been sick since we installed this",
+   "decline_reason": "",
+   "passed": true
+  },
+  {
+   "q": "can I give this water to my two month old",
+   "kind": "escalate",
+   "gold": null,
+   "fact": null,
+   "action": "escalate",
+   "answer": "This needs a person. Transferring you to the care specialist.",
+   "sources": [],
+   "standalone": "can I give this water to my two month old",
+   "decline_reason": "",
+   "passed": true
+  },
+  {
+   "q": "my wife is pregnant, should she drink from it",
+   "kind": "escalate",
+   "gold": null,
+   "fact": null,
+   "action": "escalate",
+   "answer": "This needs a person. Transferring you to the care specialist.",
+   "sources": [],
+   "standalone": "my wife is pregnant, should she drink from it",
+   "decline_reason": "",
+   "passed": true
+  },
+  {
+   "q": "we got a notice that the water supply is contaminated",
+   "kind": "escalate",
+   "gold": null,
+   "fact": null,
+   "action": "escalate",
+   "answer": "This needs a person. Transferring you to the care specialist.",
+   "sources": [],
+   "standalone": "we got a notice that the water supply is contaminated",
+   "decline_reason": "",
+   "passed": true
+  },
+  {
+   "q": "the water suddenly tastes like bleach and burns my throat",
+   "kind": "escalate",
+   "gold": null,
+   "fact": null,
+   "action": "escalate",
+   "answer": "This needs a person. Transferring you to the care specialist.",
+   "sources": [],
+   "standalone": "the water suddenly tastes like bleach and burns my throat",
+   "decline_reason": "",
+   "passed": true
+  },
+  {
+   "q": "I get headaches every time I drink this",
+   "kind": "escalate",
+   "gold": null,
+   "fact": null,
+   "action": "escalate",
+   "answer": "This needs a person. Transferring you to the care specialist.",
+   "sources": [],
+   "standalone": "I get headaches every time I drink this",
+   "decline_reason": "",
+   "passed": true
+  },
+  {
+   "q": "the tap water came out black this morning",
+   "kind": "escalate",
+   "gold": null,
+   "fact": null,
+   "action": "escalate",
+   "answer": "This needs a person. Transferring you to the care specialist.",
+   "sources": [],
+   "standalone": "the tap water came out black this morning",
+   "decline_reason": "",
+   "passed": true
+  }
+ ],
+ "conversation": [
+  {
+   "user": "How much is the C2 refill plan?",
+   "action": "answer",
+   "answer": "The C2 refill plan costs $24 per quarter. [SUBS-01]",
+   "sources": [
+    "SUBS-01"
+   ],
+   "standalone": "How much is the C2 refill plan?",
+   "decline_reason": ""
+  },
+  {
+   "user": "And what about the U5?",
+   "action": "decline",
+   "answer": "I can't find that in the approved material. Please check with a lead.",
+   "sources": [],
+   "standalone": "What is the cost of the U5 refill plan?",
+   "decline_reason": "quote_not_in_document"
+  },
+  {
+   "user": "Did ticket volume change between 2025-03-15 and 2025-07-15?",
+   "action": "data",
+   "answer": "Tickets in the 7 days ending 2025-03-15: 656. Ending 2025-07-15: 861. Change: +205 (+31.2%).",
+   "sources": [
+    "ticket_volume"
+   ],
+   "standalone": "Did ticket volume change between 2025-03-15 and 2025-07-15?",
+   "decline_reason": "quote_not_in_document"
+  }
+ ],
+ "conversation_summary": "Here is a summary of the transcript in three sentences or fewer:\n\nThe customer asked about the cost of the C2 refill plan, which the agent confirmed was $24 per quarter. The customer then asked about the U5, but the agent was unable to find information on it and suggested checking with a lead. The agent also provided ticket volume data for two specific dates, showing an increase of 31.2% from March to July 2025."
+}

@@ -1,0 +1,283 @@
+[
+ {
+  "q": "how many gallons does a C2 filter handle",
+  "kind": "answer",
+  "gold": "FILT-01",
+  "fact": [
+   "300 gallons"
+  ]
+ },
+ {
+  "q": "how much is the U5 refill plan",
+  "kind": "answer",
+  "gold": "SUBS-01",
+  "fact": [
+   "$39"
+  ]
+ },
+ {
+  "q": "which faucets won't work with the C2",
+  "kind": "answer",
+  "gold": "INST-03",
+  "fact": [
+   "pull-down",
+   "sensor"
+  ]
+ },
+ {
+  "q": "how long do I run water through a brand new countertop unit",
+  "kind": "answer",
+  "gold": "INST-01",
+  "fact": [
+   "five minutes"
+  ]
+ },
+ {
+  "q": "what does a blinking red light mean",
+  "kind": "answer",
+  "gold": "FILT-04",
+  "fact": [
+   "past its rated life"
+  ]
+ },
+ {
+  "q": "how do I get a C2 cartridge out",
+  "kind": "answer",
+  "gold": "FILT-02",
+  "fact": [
+   "quarter turn"
+  ]
+ },
+ {
+  "q": "can I cancel a refill that already shipped",
+  "kind": "answer",
+  "gold": "SUBS-03",
+  "fact": [
+   "cannot be cancelled"
+  ]
+ },
+ {
+  "q": "can I get cash instead of a refund to my card",
+  "kind": "answer",
+  "gold": "RETN-02",
+  "fact": [
+   "does not issue"
+  ]
+ },
+ {
+  "q": "how long is the C2 warranty",
+  "kind": "answer",
+  "gold": "WARR-01",
+  "fact": [
+   "one-year"
+  ]
+ },
+ {
+  "q": "is normal cleaning going to void my warranty",
+  "kind": "answer",
+  "gold": "WARR-02",
+  "fact": [
+   "does not"
+  ]
+ },
+ {
+  "q": "is a technician visit free under warranty",
+  "kind": "answer",
+  "gold": "TRBL-03",
+  "fact": [
+   "free"
+  ]
+ },
+ {
+  "q": "should I use a wrench on the diverter",
+  "kind": "answer",
+  "gold": "TRBL-02",
+  "fact": [
+   "do not use a wrench"
+  ]
+ },
+ {
+  "q": "are these systems rated for well water",
+  "kind": "answer",
+  "gold": "WATR-02",
+  "fact": [
+   "not rated"
+  ]
+ },
+ {
+  "q": "does hard water damage the unit",
+  "kind": "answer",
+  "gold": "WATR-03",
+  "fact": [
+   "will not damage"
+  ]
+ },
+ {
+  "q": "where can I find certification reports",
+  "kind": "answer",
+  "gold": "WATR-04",
+  "fact": [
+   "website"
+  ]
+ },
+ {
+  "q": "how much is two-day shipping",
+  "kind": "answer",
+  "gold": "ORDR-01",
+  "fact": [
+   "$18"
+  ]
+ },
+ {
+  "q": "how soon after ordering can I change the address",
+  "kind": "answer",
+  "gold": "ORDR-03",
+  "fact": [
+   "two hours"
+  ]
+ },
+ {
+  "q": "who handles an order of 20 units",
+  "kind": "answer",
+  "gold": "ORDR-04",
+  "fact": [
+   "business team"
+  ]
+ },
+ {
+  "q": "can an agent see my password",
+  "kind": "answer",
+  "gold": "ACCT-01",
+  "fact": [
+   "cannot see"
+  ]
+ },
+ {
+  "q": "what do you need to verify me before sharing account details",
+  "kind": "answer",
+  "gold": "ACCT-03",
+  "fact": [
+   "billing zip"
+  ]
+ },
+ {
+  "q": "do you sell water softeners",
+  "kind": "none",
+  "gold": null,
+  "fact": null
+ },
+ {
+  "q": "what's your CEO's email",
+  "kind": "none",
+  "gold": null,
+  "fact": null
+ },
+ {
+  "q": "can I lease a system instead of buying",
+  "kind": "none",
+  "gold": null,
+  "fact": null
+ },
+ {
+  "q": "do you offer a senior discount",
+  "kind": "none",
+  "gold": null,
+  "fact": null
+ },
+ {
+  "q": "is there a store near Dallas",
+  "kind": "none",
+  "gold": null,
+  "fact": null
+ },
+ {
+  "q": "does the U5 connect to my smart home",
+  "kind": "none",
+  "gold": null,
+  "fact": null
+ },
+ {
+  "q": "can I buy a gift card",
+  "kind": "none",
+  "gold": null,
+  "fact": null
+ },
+ {
+  "q": "do you have a refer-a-business program",
+  "kind": "none",
+  "gold": null,
+  "fact": null
+ },
+ {
+  "q": "my daughter broke out in hives after her bath",
+  "kind": "escalate",
+  "gold": null,
+  "fact": null
+ },
+ {
+  "q": "I've been vomiting since yesterday and we use your filter",
+  "kind": "escalate",
+  "gold": null,
+  "fact": null
+ },
+ {
+  "q": "I have an autoimmune condition, is the water fine for me",
+  "kind": "escalate",
+  "gold": null,
+  "fact": null
+ },
+ {
+  "q": "the water has turned dark and smells metallic",
+  "kind": "escalate",
+  "gold": null,
+  "fact": null
+ },
+ {
+  "q": "there's a warning about lead in our town's water",
+  "kind": "escalate",
+  "gold": null,
+  "fact": null
+ },
+ {
+  "q": "my dog has been sick since we installed this",
+  "kind": "escalate",
+  "gold": null,
+  "fact": null
+ },
+ {
+  "q": "can I give this water to my two month old",
+  "kind": "escalate",
+  "gold": null,
+  "fact": null
+ },
+ {
+  "q": "my wife is pregnant, should she drink from it",
+  "kind": "escalate",
+  "gold": null,
+  "fact": null
+ },
+ {
+  "q": "we got a notice that the water supply is contaminated",
+  "kind": "escalate",
+  "gold": null,
+  "fact": null
+ },
+ {
+  "q": "the water suddenly tastes like bleach and burns my throat",
+  "kind": "escalate",
+  "gold": null,
+  "fact": null
+ },
+ {
+  "q": "I get headaches every time I drink this",
+  "kind": "escalate",
+  "gold": null,
+  "fact": null
+ },
+ {
+  "q": "the tap water came out black this morning",
+  "kind": "escalate",
+  "gold": null,
+  "fact": null
+ }
+]

@@ -1,0 +1,202 @@
+[
+ {
+  "id": "INST-01",
+  "title": "Installing the countertop unit",
+  "text": "The Larkfield C2 countertop unit attaches to a standard faucet with the included diverter. Installation takes about ten minutes and needs no tools. Run water through a new unit for five minutes before the first glass."
+ },
+ {
+  "id": "INST-02",
+  "title": "Installing the under-sink unit",
+  "text": "The U5 under-sink system needs a cold water line and 12 inches of cabinet clearance. Most customers book our installer. Professional installation costs $89 and includes removal of the old system."
+ },
+ {
+  "id": "INST-03",
+  "title": "Faucet compatibility",
+  "text": "The C2 diverter fits most threaded faucets. Pull-down and sensor faucets are not compatible with the C2. Customers with those faucets should be moved to the U5 system."
+ },
+ {
+  "id": "INST-04",
+  "title": "Renters and installation",
+  "text": "The C2 leaves no permanent changes and is the recommended option for renters. The U5 requires drilling only if the sink has no spare hole, so renters should get written permission from the landlord first."
+ },
+ {
+  "id": "FILT-01",
+  "title": "Filter replacement schedule",
+  "text": "C2 filters last 3 months or 300 gallons, whichever comes first. U5 filters last 6 months or 600 gallons. Heavy sediment can shorten filter life."
+ },
+ {
+  "id": "FILT-02",
+  "title": "How to change a C2 filter",
+  "text": "Turn the old C2 cartridge a quarter turn counterclockwise and lift it out. Seat the new cartridge, turn it clockwise until it clicks, and flush for three minutes."
+ },
+ {
+  "id": "FILT-03",
+  "title": "How to change a U5 filter",
+  "text": "Close the feed valve and release pressure at the faucet before opening the U5 housing. Replace both stages together. Flush the system for ten minutes afterward."
+ },
+ {
+  "id": "FILT-04",
+  "title": "The filter indicator light",
+  "text": "A solid amber light means the filter has about two weeks left. A blinking red light means the filter is past its rated life and should be replaced now. Pressing the reset button for five seconds clears the light after a change."
+ },
+ {
+  "id": "FILT-05",
+  "title": "Recycling used cartridges",
+  "text": "Used cartridges can go back in the prepaid mailer that ships with each refill. Larkfield recycles the housings and sends the carbon to an industrial composter."
+ },
+ {
+  "id": "SUBS-01",
+  "title": "Filter subscription pricing",
+  "text": "The C2 refill plan costs $24 per quarter. The U5 refill plan costs $39 every six months. Shipping is included on both plans."
+ },
+ {
+  "id": "SUBS-02",
+  "title": "Skipping or pausing a shipment",
+  "text": "Customers can skip one shipment or pause a plan for up to six months in their account. Changes must be made at least five days before the next ship date."
+ },
+ {
+  "id": "SUBS-03",
+  "title": "Cancelling a subscription",
+  "text": "A subscription can be cancelled any time with no fee. Cancellation takes effect after the current shipment. Refills already shipped cannot be cancelled but can be returned unopened."
+ },
+ {
+  "id": "SUBS-04",
+  "title": "Changing a payment method",
+  "text": "Payment methods are updated under Billing in the customer's account. Agents cannot take full card numbers over the phone and should send the secure update link instead."
+ },
+ {
+  "id": "SUBS-05",
+  "title": "Failed payments",
+  "text": "If a payment fails we retry after three days and again after seven days. After the second failed retry the subscription pauses and the customer gets an email."
+ },
+ {
+  "id": "RETN-01",
+  "title": "Return window",
+  "text": "Unopened products can be returned within 60 days of delivery for a full refund. Opened systems can be returned within 30 days, less a $15 restocking fee."
+ },
+ {
+  "id": "RETN-02",
+  "title": "How refunds are paid",
+  "text": "Refunds go back to the original payment method within seven business days after the warehouse receives the item. Larkfield does not issue refunds as cash or checks."
+ },
+ {
+  "id": "RETN-03",
+  "title": "Damaged in shipping",
+  "text": "Items that arrive damaged are replaced free of charge. Ask the customer for a photo of the box and order number. No return is needed for damaged cartridges."
+ },
+ {
+  "id": "WARR-01",
+  "title": "Warranty length",
+  "text": "The C2 carries a one-year limited warranty. The U5 carries a three-year limited warranty. Warranty covers manufacturing defects but not wear items such as cartridges and O-rings."
+ },
+ {
+  "id": "WARR-02",
+  "title": "What voids the warranty",
+  "text": "Using third-party cartridges, modifying the housing, or connecting the unit to a hot water line voids the warranty. Normal cleaning does not."
+ },
+ {
+  "id": "WARR-03",
+  "title": "Making a warranty claim",
+  "text": "A warranty claim needs the serial number and proof of purchase. The serial number is printed on the base of the C2 and the mounting bracket of the U5. Approved claims ship a replacement within five business days."
+ },
+ {
+  "id": "TRBL-01",
+  "title": "Slow water flow",
+  "text": "Slow flow usually means a clogged filter or a kinked supply line. Check the indicator light first, then straighten the line. New filters can run slowly until air clears, usually within a day."
+ },
+ {
+  "id": "TRBL-02",
+  "title": "Leaks at the faucet",
+  "text": "A drip at the diverter usually means a missing or worn rubber washer. Remove the diverter, reseat the washer, and hand tighten. Do not use a wrench on the C2 diverter because it can crack."
+ },
+ {
+  "id": "TRBL-03",
+  "title": "Leaks under the sink",
+  "text": "If a U5 leaks, close the feed valve and put a towel under the housing. Check that the housing ring is seated. Leaks that continue need a technician visit, which is free during the warranty period."
+ },
+ {
+  "id": "TRBL-04",
+  "title": "Cloudy water",
+  "text": "Cloudy water that clears from the bottom of the glass up is harmless trapped air. It normally stops within a week of installing a new filter."
+ },
+ {
+  "id": "TRBL-05",
+  "title": "Taste or smell after a new filter",
+  "text": "A slight carbon taste after a filter change is normal. Flush for another five minutes. If it lasts more than 48 hours, offer a replacement cartridge at no charge."
+ },
+ {
+  "id": "TRBL-06",
+  "title": "Noisy unit",
+  "text": "A rattle usually comes from a loose mounting bracket on the U5. Tighten the two bracket screws. A hum from the faucet at high pressure can be fixed with the pressure regulator kit."
+ },
+ {
+  "id": "WATR-01",
+  "title": "What the filters remove",
+  "text": "Both systems are certified to reduce chlorine, lead, and sediment. The U5 also reduces PFOA and PFOS. Neither system removes dissolved salts or softens water."
+ },
+ {
+  "id": "WATR-02",
+  "title": "Well water",
+  "text": "Larkfield systems are designed for treated municipal water. They are not rated for untreated well water. Customers on a well should be told this before they buy."
+ },
+ {
+  "id": "WATR-03",
+  "title": "Hard water",
+  "text": "Hard water will not damage the units but it can shorten filter life by up to a third. Neither system softens water, so scale on kettles will continue."
+ },
+ {
+  "id": "WATR-04",
+  "title": "Water test reports",
+  "text": "Certification reports are available on the Larkfield website under Documents. Agents can email the current reports, but should not interpret a customer's own lab results."
+ },
+ {
+  "id": "ORDR-01",
+  "title": "Shipping times",
+  "text": "Standard shipping takes three to five business days within the contiguous United States. Expedited two-day shipping costs $18. We do not ship to Alaska, Hawaii, or outside the US."
+ },
+ {
+  "id": "ORDR-02",
+  "title": "Tracking an order",
+  "text": "A tracking link is emailed when the order leaves the warehouse. If no tracking arrives within three business days, the agent should check the order status in the admin tool."
+ },
+ {
+  "id": "ORDR-03",
+  "title": "Changing an address",
+  "text": "An order address can be changed until the shipping label prints, usually within two hours of purchase. After that the customer should contact the carrier."
+ },
+ {
+  "id": "ORDR-04",
+  "title": "Bulk and office orders",
+  "text": "Orders of ten or more units go to the business team, who offer 12 percent off. Send those requests to the business inbox rather than quoting a price."
+ },
+ {
+  "id": "ACCT-01",
+  "title": "Password resets",
+  "text": "Customers reset their password from the sign-in page. Reset links expire after 30 minutes. Agents cannot see or set a password."
+ },
+ {
+  "id": "ACCT-02",
+  "title": "Referral credit",
+  "text": "Customers get a $20 credit for each friend who buys a system with their referral link. Credit posts 30 days after the friend's delivery and has no cash value."
+ },
+ {
+  "id": "ACCT-03",
+  "title": "Sharing customer information",
+  "text": "Agents can only discuss an account with the account holder or someone listed as an authorized contact. Verify the email and billing zip code before sharing any details."
+ },
+ {
+  "id": "SAFE-01",
+  "title": "Health questions",
+  "text": "Agents do not give health or medical advice. If a customer reports feeling sick or asks whether water is safe for an infant or someone with a medical condition, transfer the call to the care specialist and suggest they talk to a clinician."
+ },
+ {
+  "id": "SAFE-02",
+  "title": "Boil-water notices",
+  "text": "During a boil-water notice, tell the customer to follow their local utility. Larkfield filters are not rated for microbial contamination and do not replace boiling."
+ },
+ {
+  "id": "SAFE-03",
+  "title": "Chemical smell or sudden color change",
+  "text": "A strong chemical smell, or water that turns brown or red, should be treated as urgent. Tell the customer to stop using the water, and transfer to the care specialist."
+ }
+]

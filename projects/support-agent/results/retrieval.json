@@ -1,0 +1,14 @@
+{
+ "embeddings": "Sentence embeddings (all-MiniLM-L6-v2)",
+ "questions": 20,
+ "bm25": {
+  "hit_at_1": 0.7,
+  "hit_at_3": 0.8,
+  "mrr": 0.760741341991342
+ },
+ "vector": {
+  "hit_at_1": 0.85,
+  "hit_at_3": 1.0,
+  "mrr": 0.925
+ }
+}

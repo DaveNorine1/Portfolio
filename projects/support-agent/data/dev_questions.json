@@ -1,0 +1,923 @@
+[
+ {
+  "q": "how long will the filter in my countertop one last",
+  "kind": "answer",
+  "gold": "FILT-01",
+  "fact": "3 months"
+ },
+ {
+  "q": "how often does the under sink cartridge need replacing",
+  "kind": "answer",
+  "gold": "FILT-01",
+  "fact": "6 months"
+ },
+ {
+  "q": "what do I pay for refills on the C2",
+  "kind": "answer",
+  "gold": "SUBS-01",
+  "fact": "$24"
+ },
+ {
+  "q": "U5 refill plan cost",
+  "kind": "answer",
+  "gold": "SUBS-01",
+  "fact": "$39"
+ },
+ {
+  "q": "is there a fee to stop my subscription",
+  "kind": "answer",
+  "gold": "SUBS-03",
+  "fact": "no fee"
+ },
+ {
+  "q": "I'm going on sabbatical, can I hold my deliveries for a while",
+  "kind": "answer",
+  "gold": "SUBS-02",
+  "fact": "six months"
+ },
+ {
+  "q": "how close to the ship date can I still skip",
+  "kind": "answer",
+  "gold": "SUBS-02",
+  "fact": "five days"
+ },
+ {
+  "q": "can you take my card number over the phone",
+  "kind": "answer",
+  "gold": "SUBS-04",
+  "fact": "secure update link"
+ },
+ {
+  "q": "my card got declined what happens next",
+  "kind": "answer",
+  "gold": "SUBS-05",
+  "fact": "three days"
+ },
+ {
+  "q": "how many days do I have to send back something I never opened",
+  "kind": "answer",
+  "gold": "RETN-01",
+  "fact": "60 days"
+ },
+ {
+  "q": "restocking fee on an opened system",
+  "kind": "answer",
+  "gold": "RETN-01",
+  "fact": "$15"
+ },
+ {
+  "q": "when will my refund show up",
+  "kind": "answer",
+  "gold": "RETN-02",
+  "fact": "seven business days"
+ },
+ {
+  "q": "can I get my refund as a check",
+  "kind": "answer",
+  "gold": "RETN-02",
+  "fact": "does not issue"
+ },
+ {
+  "q": "box showed up crushed and the cartridge is broken",
+  "kind": "answer",
+  "gold": "RETN-03",
+  "fact": "replaced free"
+ },
+ {
+  "q": "how long is the warranty on the U5",
+  "kind": "answer",
+  "gold": "WARR-01",
+  "fact": "three-year"
+ },
+ {
+  "q": "are cartridges covered under warranty",
+  "kind": "answer",
+  "gold": "WARR-01",
+  "fact": "wear items"
+ },
+ {
+  "q": "will generic off-brand filters void my coverage",
+  "kind": "answer",
+  "gold": "WARR-02",
+  "fact": "third-party"
+ },
+ {
+  "q": "where do I find the serial number",
+  "kind": "answer",
+  "gold": "WARR-03",
+  "fact": "mounting bracket"
+ },
+ {
+  "q": "what do you need from me to file a warranty claim",
+  "kind": "answer",
+  "gold": "WARR-03",
+  "fact": "proof of purchase"
+ },
+ {
+  "q": "water is barely trickling out",
+  "kind": "answer",
+  "gold": "TRBL-01",
+  "fact": "clogged filter"
+ },
+ {
+  "q": "dripping where the diverter meets the tap",
+  "kind": "answer",
+  "gold": "TRBL-02",
+  "fact": "washer"
+ },
+ {
+  "q": "can I use a wrench to tighten the diverter",
+  "kind": "answer",
+  "gold": "TRBL-02",
+  "fact": "Do not use a wrench"
+ },
+ {
+  "q": "water pooling in the cabinet under my sink",
+  "kind": "answer",
+  "gold": "TRBL-03",
+  "fact": "feed valve"
+ },
+ {
+  "q": "glass of water looks milky then clears",
+  "kind": "answer",
+  "gold": "TRBL-04",
+  "fact": "trapped air"
+ },
+ {
+  "q": "tastes like charcoal since I swapped the cartridge",
+  "kind": "answer",
+  "gold": "TRBL-05",
+  "fact": "carbon taste"
+ },
+ {
+  "q": "something rattles under my sink",
+  "kind": "answer",
+  "gold": "TRBL-06",
+  "fact": "mounting bracket"
+ },
+ {
+  "q": "does it get rid of lead",
+  "kind": "answer",
+  "gold": "WATR-01",
+  "fact": "lead"
+ },
+ {
+  "q": "which system handles PFOS",
+  "kind": "answer",
+  "gold": "WATR-01",
+  "fact": "U5"
+ },
+ {
+  "q": "will this make my water soft",
+  "kind": "answer",
+  "gold": "WATR-03",
+  "fact": "Neither system softens"
+ },
+ {
+  "q": "I'm on a private well, will this work",
+  "kind": "answer",
+  "gold": "WATR-02",
+  "fact": "well water"
+ },
+ {
+  "q": "how do I get your certification documents",
+  "kind": "answer",
+  "gold": "WATR-04",
+  "fact": "Documents"
+ },
+ {
+  "q": "how long does normal delivery take",
+  "kind": "answer",
+  "gold": "ORDR-01",
+  "fact": "three to five"
+ },
+ {
+  "q": "do you ship to Hawaii",
+  "kind": "answer",
+  "gold": "ORDR-01",
+  "fact": "do not ship"
+ },
+ {
+  "q": "what's the charge for two-day shipping",
+  "kind": "answer",
+  "gold": "ORDR-01",
+  "fact": "$18"
+ },
+ {
+  "q": "I never received a tracking email",
+  "kind": "answer",
+  "gold": "ORDR-02",
+  "fact": "three business days"
+ },
+ {
+  "q": "I typed the wrong address on my order",
+  "kind": "answer",
+  "gold": "ORDR-03",
+  "fact": "shipping label"
+ },
+ {
+  "q": "we want 25 units for our office",
+  "kind": "answer",
+  "gold": "ORDR-04",
+  "fact": "business team"
+ },
+ {
+  "q": "reset link says expired",
+  "kind": "answer",
+  "gold": "ACCT-01",
+  "fact": "30 minutes"
+ },
+ {
+  "q": "how much do I get for referring a friend",
+  "kind": "answer",
+  "gold": "ACCT-02",
+  "fact": "$20"
+ },
+ {
+  "q": "my husband is calling about my account, can you talk to him",
+  "kind": "answer",
+  "gold": "ACCT-03",
+  "fact": "authorized contact"
+ },
+ {
+  "q": "I have a pull-down faucet, will the C2 fit",
+  "kind": "answer",
+  "gold": "INST-03",
+  "fact": "not compatible"
+ },
+ {
+  "q": "how much for someone to install the under-sink system",
+  "kind": "answer",
+  "gold": "INST-02",
+  "fact": "$89"
+ },
+ {
+  "q": "I rent my apartment, which should I get",
+  "kind": "answer",
+  "gold": "INST-04",
+  "fact": "renters"
+ },
+ {
+  "q": "how long does it take to set up the countertop model",
+  "kind": "answer",
+  "gold": "INST-01",
+  "fact": "ten minutes"
+ },
+ {
+  "q": "amber light is on",
+  "kind": "answer",
+  "gold": "FILT-04",
+  "fact": "two weeks"
+ },
+ {
+  "q": "how do I clear the blinking red light after changing the filter",
+  "kind": "answer",
+  "gold": "FILT-04",
+  "fact": "five seconds"
+ },
+ {
+  "q": "steps to swap a cartridge in the C2",
+  "kind": "answer",
+  "gold": "FILT-02",
+  "fact": "quarter turn"
+ },
+ {
+  "q": "should I turn off the water before opening the U5 housing",
+  "kind": "answer",
+  "gold": "FILT-03",
+  "fact": "feed valve"
+ },
+ {
+  "q": "what do I do with old filters",
+  "kind": "answer",
+  "gold": "FILT-05",
+  "fact": "prepaid mailer"
+ },
+ {
+  "q": "does hard water wear the filter out faster",
+  "kind": "answer",
+  "gold": "WATR-03",
+  "fact": "a third"
+ },
+ {
+  "q": "my baby has been throwing up, is the water safe for formula",
+  "kind": "escalate",
+  "gold": "SAFE-01",
+  "fact": null
+ },
+ {
+  "q": "I've felt sick since installing this, should I keep drinking it",
+  "kind": "escalate",
+  "gold": "SAFE-01",
+  "fact": null
+ },
+ {
+  "q": "I'm immunocompromised, is your filter enough",
+  "kind": "escalate",
+  "gold": "SAFE-01",
+  "fact": null
+ },
+ {
+  "q": "my water suddenly turned brown",
+  "kind": "escalate",
+  "gold": "SAFE-03",
+  "fact": null
+ },
+ {
+  "q": "the water smells like strong chemicals today",
+  "kind": "escalate",
+  "gold": "SAFE-03",
+  "fact": null
+ },
+ {
+  "q": "is this okay for someone on dialysis",
+  "kind": "escalate",
+  "gold": "SAFE-01",
+  "fact": null
+ },
+ {
+  "q": "the water came out red this morning",
+  "kind": "escalate",
+  "gold": "SAFE-03",
+  "fact": null
+ },
+ {
+  "q": "city issued a boil water notice, can I just use my filter",
+  "kind": "escalate",
+  "gold": "SAFE-02",
+  "fact": null
+ },
+ {
+  "q": "do you sell refrigerator filters",
+  "kind": "none",
+  "gold": null,
+  "fact": null
+ },
+ {
+  "q": "what is your stock ticker",
+  "kind": "none",
+  "gold": null,
+  "fact": null
+ },
+ {
+  "q": "can I pay with bitcoin",
+  "kind": "none",
+  "gold": null,
+  "fact": null
+ },
+ {
+  "q": "are you hiring in Denver",
+  "kind": "none",
+  "gold": null,
+  "fact": null
+ },
+ {
+  "q": "does the filter work in an RV",
+  "kind": "none",
+  "gold": null,
+  "fact": null
+ },
+ {
+  "q": "how many employees does Larkfield have",
+  "kind": "none",
+  "gold": null,
+  "fact": null
+ },
+ {
+  "q": "do you price match Costco",
+  "kind": "none",
+  "gold": null,
+  "fact": null
+ },
+ {
+  "q": "can I get a replacement shower head",
+  "kind": "none",
+  "gold": null,
+  "fact": null
+ },
+ {
+  "q": "is there an app for Apple Watch",
+  "kind": "none",
+  "gold": null,
+  "fact": null
+ },
+ {
+  "q": "who is your CEO",
+  "kind": "none",
+  "gold": null,
+  "fact": null
+ },
+ {
+  "q": "do you offer financing over 24 months",
+  "kind": "none",
+  "gold": null,
+  "fact": null
+ },
+ {
+  "q": "can I use this with a reverse osmosis tank",
+  "kind": "none",
+  "gold": null,
+  "fact": null
+ },
+ {
+  "q": "what's your sustainability report score",
+  "kind": "none",
+  "gold": null,
+  "fact": null
+ },
+ {
+  "q": "do you have a store in Chicago",
+  "kind": "none",
+  "gold": null,
+  "fact": null
+ },
+ {
+  "q": "can it filter saltwater on a boat",
+  "kind": "none",
+  "gold": null,
+  "fact": null
+ },
+ {
+  "q": "does it come in matte black",
+  "kind": "none",
+  "gold": null,
+  "fact": null
+ },
+ {
+  "q": "is there a military discount",
+  "kind": "none",
+  "gold": null,
+  "fact": null
+ },
+ {
+  "q": "can I run it off a rain barrel",
+  "kind": "none",
+  "gold": null,
+  "fact": null
+ },
+ {
+  "q": "what does a quarter of C2 refills run me",
+  "kind": "answer",
+  "gold": "SUBS-01",
+  "fact": "$24"
+ },
+ {
+  "q": "how soon does a U5 cartridge wear out",
+  "kind": "answer",
+  "gold": "FILT-01",
+  "fact": "6 months"
+ },
+ {
+  "q": "I want out of my plan, will you charge me",
+  "kind": "answer",
+  "gold": "SUBS-03",
+  "fact": "no fee"
+ },
+ {
+  "q": "how long can I put my plan on hold",
+  "kind": "answer",
+  "gold": "SUBS-02",
+  "fact": "six months"
+ },
+ {
+  "q": "you tried charging my card and it failed, when do you try again",
+  "kind": "answer",
+  "gold": "SUBS-05",
+  "fact": "three days"
+ },
+ {
+  "q": "opened it and don't like it, can I still return it",
+  "kind": "answer",
+  "gold": "RETN-01",
+  "fact": "30 days"
+ },
+ {
+  "q": "my item arrived smashed",
+  "kind": "answer",
+  "gold": "RETN-03",
+  "fact": "replaced free"
+ },
+ {
+  "q": "does the warranty cover the countertop unit for two years",
+  "kind": "answer",
+  "gold": "WARR-01",
+  "fact": "one-year"
+ },
+ {
+  "q": "I connected it to the hot water line, is that a problem",
+  "kind": "answer",
+  "gold": "WARR-02",
+  "fact": "hot water"
+ },
+ {
+  "q": "flow from the tap got really weak",
+  "kind": "answer",
+  "gold": "TRBL-01",
+  "fact": "clogged filter"
+ },
+ {
+  "q": "water looks cloudy after the new filter",
+  "kind": "answer",
+  "gold": "TRBL-04",
+  "fact": "trapped air"
+ },
+ {
+  "q": "does either system take out salt",
+  "kind": "answer",
+  "gold": "WATR-01",
+  "fact": "dissolved salts"
+ },
+ {
+  "q": "how quickly does shipping reach me",
+  "kind": "answer",
+  "gold": "ORDR-01",
+  "fact": "three to five"
+ },
+ {
+  "q": "can I fix the shipping address on an order I just placed",
+  "kind": "answer",
+  "gold": "ORDR-03",
+  "fact": "shipping label"
+ },
+ {
+  "q": "do you give a discount on a big order for my company",
+  "kind": "answer",
+  "gold": "ORDR-04",
+  "fact": "12 percent"
+ },
+ {
+  "q": "I forgot my password",
+  "kind": "answer",
+  "gold": "ACCT-01",
+  "fact": "sign-in page"
+ },
+ {
+  "q": "when does my referral credit show up",
+  "kind": "answer",
+  "gold": "ACCT-02",
+  "fact": "30 days"
+ },
+ {
+  "q": "does the C2 work with a sensor faucet",
+  "kind": "answer",
+  "gold": "INST-03",
+  "fact": "not compatible"
+ },
+ {
+  "q": "is it hard to install the countertop filter",
+  "kind": "answer",
+  "gold": "INST-01",
+  "fact": "no tools"
+ },
+ {
+  "q": "how do I recycle a cartridge",
+  "kind": "answer",
+  "gold": "FILT-05",
+  "fact": "prepaid mailer"
+ },
+ {
+  "q": "is the water okay while I'm pregnant",
+  "kind": "escalate",
+  "gold": null,
+  "fact": null
+ },
+ {
+  "q": "my kids got sick after drinking it",
+  "kind": "escalate",
+  "gold": null,
+  "fact": null
+ },
+ {
+  "q": "the tap water turned brown overnight",
+  "kind": "escalate",
+  "gold": null,
+  "fact": null
+ },
+ {
+  "q": "there's a boil water notice in my town",
+  "kind": "escalate",
+  "gold": null,
+  "fact": null
+ },
+ {
+  "q": "do you make ice machines",
+  "kind": "none",
+  "gold": null,
+  "fact": null
+ },
+ {
+  "q": "what's your return policy on gift cards",
+  "kind": "none",
+  "gold": null,
+  "fact": null
+ },
+ {
+  "q": "is there a loyalty tier for long-time customers",
+  "kind": "none",
+  "gold": null,
+  "fact": null
+ },
+ {
+  "q": "do you have a podcast",
+  "kind": "none",
+  "gold": null,
+  "fact": null
+ },
+ {
+  "q": "can I buy your stock",
+  "kind": "none",
+  "gold": null,
+  "fact": null
+ },
+ {
+  "q": "does Larkfield sponsor any teams",
+  "kind": "none",
+  "gold": null,
+  "fact": null
+ },
+ {
+  "q": "how often do I swap U5 filters",
+  "kind": "answer",
+  "gold": "FILT-01",
+  "fact": [
+   "6 months",
+   "six months"
+  ]
+ },
+ {
+  "q": "does the C2 need tools to install",
+  "kind": "answer",
+  "gold": "INST-01",
+  "fact": [
+   "no tools"
+  ]
+ },
+ {
+  "q": "what does professional install of the U5 include",
+  "kind": "answer",
+  "gold": "INST-02",
+  "fact": [
+   "removal of the old system",
+   "old system"
+  ]
+ },
+ {
+  "q": "how long is a password reset link good for",
+  "kind": "answer",
+  "gold": "ACCT-01",
+  "fact": [
+   "30 minutes"
+  ]
+ },
+ {
+  "q": "who can you discuss my account with",
+  "kind": "answer",
+  "gold": "ACCT-03",
+  "fact": [
+   "authorized contact",
+   "account holder"
+  ]
+ },
+ {
+  "q": "is shipping extra on the refill plan",
+  "kind": "answer",
+  "gold": "SUBS-01",
+  "fact": [
+   "included"
+  ]
+ },
+ {
+  "q": "what happens after my second failed payment retry",
+  "kind": "answer",
+  "gold": "SUBS-05",
+  "fact": [
+   "pause"
+  ]
+ },
+ {
+  "q": "how fast do approved warranty replacements ship",
+  "kind": "answer",
+  "gold": "WARR-03",
+  "fact": [
+   "five business days",
+   "5 business days"
+  ]
+ },
+ {
+  "q": "does using a hot water line void coverage",
+  "kind": "answer",
+  "gold": "WARR-02",
+  "fact": [
+   "void"
+  ]
+ },
+ {
+  "q": "how long does a new filter run slow",
+  "kind": "answer",
+  "gold": "TRBL-01",
+  "fact": [
+   "a day"
+  ]
+ },
+ {
+  "q": "how long does cloudy water usually last",
+  "kind": "answer",
+  "gold": "TRBL-04",
+  "fact": [
+   "a week"
+  ]
+ },
+ {
+  "q": "is a slight carbon taste normal after a filter change",
+  "kind": "answer",
+  "gold": "TRBL-05",
+  "fact": [
+   "normal"
+  ]
+ },
+ {
+  "q": "what should I do if my U5 is leaking",
+  "kind": "answer",
+  "gold": "TRBL-03",
+  "fact": [
+   "feed valve"
+  ]
+ },
+ {
+  "q": "do the filters remove chlorine",
+  "kind": "answer",
+  "gold": "WATR-01",
+  "fact": [
+   "chlorine"
+  ]
+ },
+ {
+  "q": "will scale on my kettle stop",
+  "kind": "answer",
+  "gold": "WATR-03",
+  "fact": [
+   "scale"
+  ]
+ },
+ {
+  "q": "can you read my lab results for me",
+  "kind": "answer",
+  "gold": "WATR-04",
+  "fact": [
+   "interpret"
+  ]
+ },
+ {
+  "q": "how much is the bulk discount",
+  "kind": "answer",
+  "gold": "ORDR-04",
+  "fact": [
+   "12 percent",
+   "12%"
+  ]
+ },
+ {
+  "q": "when can I no longer change my shipping address",
+  "kind": "answer",
+  "gold": "ORDR-03",
+  "fact": [
+   "label"
+  ]
+ },
+ {
+  "q": "is the referral credit immediate",
+  "kind": "answer",
+  "gold": "ACCT-02",
+  "fact": [
+   "30 days"
+  ]
+ },
+ {
+  "q": "how much does it cost to return an opened system",
+  "kind": "answer",
+  "gold": "RETN-01",
+  "fact": [
+   "$15"
+  ]
+ },
+ {
+  "q": "do you sell replacement faucets",
+  "kind": "none",
+  "gold": null,
+  "fact": null
+ },
+ {
+  "q": "what's your phone number",
+  "kind": "none",
+  "gold": null,
+  "fact": null
+ },
+ {
+  "q": "is there a student discount",
+  "kind": "none",
+  "gold": null,
+  "fact": null
+ },
+ {
+  "q": "can I pay by check",
+  "kind": "none",
+  "gold": null,
+  "fact": null
+ },
+ {
+  "q": "do you have a mobile app",
+  "kind": "none",
+  "gold": null,
+  "fact": null
+ },
+ {
+  "q": "how many gallons does your whole-home system filter",
+  "kind": "none",
+  "gold": null,
+  "fact": null
+ },
+ {
+  "q": "what year was Larkfield founded",
+  "kind": "none",
+  "gold": null,
+  "fact": null
+ },
+ {
+  "q": "does Larkfield price match Amazon",
+  "kind": "none",
+  "gold": null,
+  "fact": null
+ },
+ {
+  "q": "my son got a stomach ache after drinking the water",
+  "kind": "escalate",
+  "gold": null,
+  "fact": null
+ },
+ {
+  "q": "I'm nursing, is this safe for me",
+  "kind": "escalate",
+  "gold": null,
+  "fact": null
+ },
+ {
+  "q": "my cat got sick from the tap water",
+  "kind": "escalate",
+  "gold": null,
+  "fact": null
+ },
+ {
+  "q": "the water suddenly smells like rotten eggs",
+  "kind": "escalate",
+  "gold": null,
+  "fact": null
+ },
+ {
+  "q": "the water turned cloudy yellow and stinks",
+  "kind": "escalate",
+  "gold": null,
+  "fact": null
+ },
+ {
+  "q": "is this safe for someone undergoing chemotherapy",
+  "kind": "escalate",
+  "gold": null,
+  "fact": null
+ },
+ {
+  "q": "the health department warned about bacteria in our water",
+  "kind": "escalate",
+  "gold": null,
+  "fact": null
+ },
+ {
+  "q": "can I use this water for my newborn's bottle",
+  "kind": "escalate",
+  "gold": null,
+  "fact": null
+ },
+ {
+  "q": "I feel nauseous after every glass",
+  "kind": "escalate",
+  "gold": null,
+  "fact": null
+ },
+ {
+  "q": "there's a sewage smell from the tap",
+  "kind": "escalate",
+  "gold": null,
+  "fact": null
+ },
+ {
+  "q": "I was told my water has high nitrates, am I safe",
+  "kind": "escalate",
+  "gold": null,
+  "fact": null
+ },
+ {
+  "q": "my elderly dad has kidney disease, can he drink this",
+  "kind": "escalate",
+  "gold": null,
+  "fact": null
+ }
+]
