@@ -1,0 +1,8 @@
+label,Pearson r,source_series
+Housing starts,0.44943925115423017,HOUST
+Building permits,0.40936833451669774,PERMIT
+Unemployment,-0.3894928935340078,UNRATE
+Consumer price index,-0.4262734063373675,CPIAUCSL
+Gasoline prices,-0.5680554465328717,GASREGW
+Crude oil prices,-0.5733680390449348,DCOILWTICO
+Economic policy uncertainty,-0.5261496534782814,USEPUINDXD
