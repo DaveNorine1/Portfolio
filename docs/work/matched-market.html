@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Measuring Lift With Matched-Market Tests | Dave Norine</title><meta name="description" content="How to design a geo test and turn the read into a scale-or-stop decision.">
+<meta name="author" content="Dave Norine"><meta property="og:title" content="Measuring Lift With Matched-Market Tests | Dave Norine"><meta property="og:description" content="How to design a geo test and turn the read into a scale-or-stop decision.">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500&family=Libre+Franklin:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap">
+<link rel="stylesheet" href="../assets/site.css?v=3"></head><body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="topband"><div class="wrap top"><a href="../index.html"><b>Dave Norine</b></a><nav><a href="../index.html#work">Work</a><a href="https://www.linkedin.com/in/davidnorine">LinkedIn</a><a href="https://github.com/DaveNorine1">GitHub</a><a href="mailto:davidnorine@gmail.com">Email</a></nav></div></header>
+<main id="main"><div class="band"><svg class="curves motif" viewBox="0 0 320 150" preserveAspectRatio="xMidYMid meet" aria-hidden="true" focusable="false"><path pathLength="1" class="c2" d="M14.0 88.0L20.2 92.7L26.4 96.0L32.6 97.2L38.9 96.5L45.1 94.6L51.3 92.6L57.5 91.6L63.7 91.6L69.9 92.1L76.1 92.1L82.3 90.8L88.6 87.9L94.8 83.8L101.0 79.7L107.2 77.0L113.4 76.6L119.6 78.4L125.8 81.9L132.0 85.6L138.3 88.5L144.5 89.9L150.7 90.1L156.9 89.8L163.1 90.2L169.3 91.7L175.5 94.2L181.7 96.8L188.0 98.3L194.2 97.8L200.4 95.1L206.6 90.7L212.8 80.5L219.0 71.2L225.2 63.7L231.4 58.2L237.7 53.8L243.9 49.5L250.1 44.5L256.3 39.2L262.5 38.3L268.7 37.8L274.9 38.7L281.1 41.6L287.4 45.8L293.6 50.3L299.8 53.8L306.0 55.1"/><path pathLength="1" class="" d="M14.0 95.7L20.2 99.5L26.4 101.3L32.6 101.0L38.9 99.3L45.1 97.1L51.3 95.6L57.5 95.2L63.7 95.6L69.9 95.9L76.1 95.1L82.3 92.6L88.6 88.8L94.8 84.6L101.0 81.5L107.2 80.4L113.4 81.8L119.6 84.9L125.8 88.8L132.0 92.1L138.3 94.0L144.5 94.4L150.7 94.2L156.9 94.2L163.1 95.3L169.3 97.5L175.5 100.1L181.7 102.0L188.0 102.0L194.2 99.8L200.4 95.8L206.6 91.0L212.8 86.9L219.0 84.5L225.2 84.1L231.4 85.2L237.7 86.7L243.9 87.7L250.1 87.6L256.3 86.8L262.5 86.1L268.7 86.6L274.9 88.9L281.1 92.8L287.4 97.3L293.6 101.2L299.8 103.1L306.0 102.7"/><path class="guide" d="M207 14V136"/></svg><div class="wrap">
+
+<div class="kicker">Experimentation</div>
+<h1>Measuring lift with matched-market tests</h1>
+<p class="lede">At a medical device division I built the test-and-learn practice: A/B testing set up with IT and Legal, and matched-market tests run with IT, Finance, Sales, and Field Marketing to measure the lift from local campaigns. Here's how I run one and how I turn the read into a decision.</p>
+</div></div><div class="wrap"><article>
+<h2>Why geo tests</h2>
+<p>A geo test needs no user-level tracking and gives a real control group. That makes it the best answer I know of when consent limits tracking and a campaign can't be randomized person by person. The hard part is reading the result honestly, because a handful of markets carries little statistical power.</p>
+<h2>Demo: a worked example on made-up data</h2>
+<p>My real test results stay private, and everything from here down is simulated. This simulation uses 40 markets over 86 weeks, with a campaign that truly lifts leads by 7.3% in test markets for 8 weeks. Here's the process:</p>
+<ul>
+<li><b>Match:</b> pair markets on level and shape over the first 52 weeks.</li>
+<li><b>Check:</b> keep the 4 pairs that track each other best on the next 26 weeks, which matching never saw.</li>
+<li><b>Assign:</b> flip a coin within each pair to choose the test market.</li>
+<li><b>Estimate:</b> use difference-in-differences on log leads, by pair.</li>
+</ul>
+<figure><figcaption>Demo: test markets separate from their controls when the campaign starts</figcaption><div id="ts"></div></figure>
+<figure><figcaption>Demo: all four pairs show lift</figcaption><div id="pr"></div></figure>
+<h3>Demo: how sure can we be?</h3>
+<p>A simple t-interval says the lift is 4.8% to 8.0%. That test is fine on average: run on the 16 untreated pairs in the same window, 4,000 random draws produced false positives 5.5% of the time, close to the expected 5%. But the width of any single interval rests on three degrees of freedom, and these four pairs happen to agree more than pairs usually do. So I took the noise level from those untreated draws, which is wider.</p>
+<p>Using that noise and a weakly skeptical prior centered on zero, the Bayesian estimate of the lift is 6.0%, with a 95% range of 1.2% to 11.1%. With four pairs, an exact randomization test also can't get below p = 0.125. Four pairs can show direction, but they can't settle a close call.</p>
+<h3>Demo: the decision</h3>
+<div class="tablewrap"><table><tbody>
+<tr><td>Probability the campaign lifts leads at all</td><td class="n">99%</td></tr>
+<tr><td>Lift needed to pay back at a made-up value of $180 a lead</td><td class="n">9.1%</td></tr>
+<tr><td>Cost per incremental lead at the point estimate</td><td class="n">$256</td></tr>
+<tr><td>Probability it pays back</td><td class="n">12%</td></tr>
+</tbody></table></div>
+<div class="result"><strong>My call on this demo: don't scale it as is.</strong> The campaign very likely works, and it probably doesn't pay for itself at this spend. A report that stopped at "significant lift" would have sent more money after it. I'd rerun at a lower spend per market with more pairs. Power to tell a lift of this size from zero climbs from 44% at 4 pairs to 96% at 8. Showing that it clears the payback line is a harder test, and it would need a new power estimate at the new spend.</div>
+<p>The simulation lets me check the answer: the true lift of 7.3% falls inside the range, and the point estimate of 6.4% landed close to it.</p>
+<h3>The code</h3>
+<pre><code>def pair_effect(log_leads, treated, control, pre, post):
+    #difference-in-differences on logs, so the effect reads as an approximate percent lift
+    t = log_leads[treated, post].mean() - log_leads[treated, pre].mean()
+    c = log_leads[control, post].mean() - log_leads[control, pre].mean()
+    return t - c
+
+def normal_posterior(mean, se, prior_mean=0.0, prior_sd=0.10):
+    #conjugate normal update with a skeptical prior centered on no effect
+    precision = 1 / prior_sd**2 + 1 / se**2
+    post_mean = (prior_mean / prior_sd**2 + mean / se**2) / precision
+    return post_mean, np.sqrt(1 / precision)</code></pre>
+<p><a href="https://github.com/DaveNorine1/Portfolio/tree/main/projects/matched-market-test">See the full test, checks, and unit tests on GitHub</a></p>
+<p class="next">Next: <a href="building-the-team.html">Building the team</a></p>
+</article>
+</div></main>
+<footer class="wrap">Dave Norine, Plymouth, Minnesota. <a href="mailto:davidnorine@gmail.com">davidnorine@gmail.com</a></footer>
+<script src="../assets/charts.js?v=2"></script><script>
+const f=v=>v.toFixed(1);const p=v=>(v>0?'+':'')+(v*100).toFixed(1)+'%';
+lineChart('ts',{x:[-22, -21, -20, -19, -18, -17, -16, -15, -14, -13, -12, -11, -10, -9, -8, -7, -6, -5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5, 6, 7],xName:'Week',xTitle:'Weeks from campaign start',fmt:f,label:'Leads indexed to the pre-period for test and control markets',marker:{x:0,label:'Campaign starts'},
+ series:[{name:'Test markets',color:'--s1',values:[103.75, 104.1, 104.35, 103.97, 101.2, 102.64, 109.05, 107.16, 105.86, 110.92, 107.61, 115.12, 110.43, 103.31, 108.71, 113.21, 110.32, 108.16, 107.76, 100.72, 98.24, 104.39, 104.7, 103.44, 103.37, 103.43, 102.83, 100.49, 98.79, 97.63]},{name:'Control markets',color:'--s2',values:[101.59, 101.13, 100.94, 106.84, 108.54, 108.3, 106.59, 110.71, 105.67, 109.61, 106.62, 107.42, 108.45, 101.54, 108.24, 108.37, 111.21, 106.62, 108.24, 97.31, 99.82, 97.5, 100.4, 98.15, 97.89, 91.86, 91.21, 95.7, 96.37, 93.65]}]});
+barChart('pr',{label:'Estimated lift by market pair',labelW:90,valueName:'Lift (log points)',fmt:p,rows:[{"label": "Pair 1", "value": 0.07313367863846576}, {"label": "Pair 2", "value": 0.06647443624035088}, {"label": "Pair 3", "value": 0.05532933876692692}, {"label": "Pair 4", "value": 0.053387194181675035}]});
+</script>
+</body></html>

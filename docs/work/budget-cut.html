@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Protecting Results Through a Double-Digit Budget Cut | Dave Norine</title><meta name="description" content="How media mix modeling guided a double-digit budget cut, with a working budget simulator on synthetic data.">
+<meta name="author" content="Dave Norine"><meta property="og:title" content="Protecting Results Through a Double-Digit Budget Cut | Dave Norine"><meta property="og:description" content="How media mix modeling guided a double-digit budget cut, with a working budget simulator on synthetic data.">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500&family=Libre+Franklin:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap">
+<link rel="stylesheet" href="../assets/site.css?v=3"></head><body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="topband"><div class="wrap top"><a href="../index.html"><b>Dave Norine</b></a><nav><a href="../index.html#work">Work</a><a href="https://www.linkedin.com/in/davidnorine">LinkedIn</a><a href="https://github.com/DaveNorine1">GitHub</a><a href="mailto:davidnorine@gmail.com">Email</a></nav></div></header>
+<main id="main"><div class="band"><svg class="curves motif" viewBox="0 0 320 150" preserveAspectRatio="xMidYMid meet" aria-hidden="true" focusable="false"><path pathLength="1" class="" d="M14.0 132.0L20.2 126.8L26.4 119.9L32.6 112.7L38.9 105.7L45.1 99.1L51.3 92.9L57.5 87.2L63.7 82.0L69.9 77.2L76.1 72.8L82.3 68.8L88.6 65.2L94.8 61.8L101.0 58.7L107.2 55.9L113.4 53.2L119.6 50.8L125.8 48.6L132.0 46.5L138.3 44.6L144.5 42.8L150.7 41.1L156.9 39.5L163.1 38.1L169.3 36.7L175.5 35.4L181.7 34.2L188.0 33.1L194.2 32.0L200.4 31.0L206.6 30.1L212.8 29.2L219.0 28.3L225.2 27.5L231.4 26.8L237.7 26.1L243.9 25.4L250.1 24.7L256.3 24.1L262.5 23.5L268.7 22.9L274.9 22.4L281.1 21.9L287.4 21.4L293.6 20.9L299.8 20.4L306.0 20.0"/><path pathLength="1" class="c2" d="M14.0 132.0L20.2 129.7L26.4 126.6L32.6 123.2L38.9 119.7L45.1 116.2L51.3 112.8L57.5 109.5L63.7 106.4L69.9 103.4L76.1 100.6L82.3 97.9L88.6 95.3L94.8 92.9L101.0 90.6L107.2 88.5L113.4 86.5L119.6 84.6L125.8 82.7L132.0 81.0L138.3 79.4L144.5 77.9L150.7 76.4L156.9 75.1L163.1 73.8L169.3 72.5L175.5 71.4L181.7 70.3L188.0 69.2L194.2 68.2L200.4 67.2L206.6 66.3L212.8 65.4L219.0 64.6L225.2 63.8L231.4 63.0L237.7 62.3L243.9 61.6L250.1 60.9L256.3 60.3L262.5 59.7L268.7 59.1L274.9 58.5L281.1 58.0L287.4 57.5L293.6 57.0L299.8 56.5L306.0 56.0"/><path pathLength="1" class="" d="M14.0 132.0L20.2 131.1L26.4 129.7L32.6 128.3L38.9 126.7L45.1 125.1L51.3 123.5L57.5 122.0L63.7 120.4L69.9 118.9L76.1 117.4L82.3 115.9L88.6 114.5L94.8 113.2L101.0 111.9L107.2 110.6L113.4 109.4L119.6 108.3L125.8 107.1L132.0 106.1L138.3 105.0L144.5 104.0L150.7 103.1L156.9 102.2L163.1 101.3L169.3 100.5L175.5 99.6L181.7 98.9L188.0 98.1L194.2 97.4L200.4 96.7L206.6 96.0L212.8 95.4L219.0 94.7L225.2 94.1L231.4 93.6L237.7 93.0L243.9 92.5L250.1 92.0L256.3 91.5L262.5 91.0L268.7 90.5L274.9 90.0L281.1 89.6L287.4 89.2L293.6 88.8L299.8 88.4L306.0 88.0"/><circle class="dot" cx="118" cy="51" r="5"/><circle class="dot d2" cx="150" cy="77" r="5"/></svg><div class="wrap">
+
+<div class="kicker">Budget decisions</div>
+<h1>Protecting results through a double-digit budget cut</h1>
+<p class="lede">When budgets took a double-digit cut at a medical device division, I wrote the media mix models that showed senior leadership where to protect investment. Leads fell by only a fraction of the decline we assumed based on past cuts.</p>
+</div></div><div class="wrap"><article>
+<h2>The situation</h2>
+<p>A cut that size can be spread evenly or placed deliberately, and the division needed to know what each choice would cost. This is a long-consideration purchase, with more than a year between a patient's first lead and a completed procedure, so waiting to see what the cut did to procedures wasn't an option.</p>
+<h2>What I did</h2>
+<ul>
+<li>Wrote the Python media mix models myself, using a holdout and regression modeling so the guidance rested on incremental effects and not on correlations.</li>
+<li>Worked with Finance on where to protect spend.</li>
+<li>Took the results to the executive team: the division President and the VPs of Marketing, Sales, and Finance.</li>
+</ul>
+<div class="result"><strong>Result:</strong> leads fell by only a fraction of the decline we assumed based on past cuts.</div>
+<h2>Demo: the same approach on made-up data</h2>
+<p>The real data stays private, so I rebuilt the method on synthetic data. It simulates three years of weekly leads for a made-up brand across five channels, with carryover (adstock) and diminishing returns (saturation). Everything from here down is simulated. That has one advantage: I can grade the model against the truth, which you never get to do with real data. It's also a best case, since the data follows the model's own equations and the forecast below uses actual holdout spend. Real data won't be this kind.</p>
+<figure><figcaption>Demo: on 26 weeks it never saw, the model averaged 1.8% error, vs. 9.7% for a flat average</figcaption><div id="bt"></div></figure>
+<h3>Demo: two ways to take a 20% cut</h3>
+<figure><figcaption>Demo: reallocating costs fewer leads than cutting evenly, in one simulated world</figcaption><div id="sc"></div></figure>
+<p>One simulated world can flatter a method, so I reran the whole exercise on 30 of them. Reallocating beat the even cut in truth every time. But the model overstated the gain in 93% of runs, promising 2.1 points on average and delivering 1.2. That's the optimizer's curse: it moves money toward wherever the estimates happen to run high. The 95% ranges held up for the even cut, covering the truth 97% of the time, but were too narrow for the reallocation (70%) and the gain (63%). So I trust the direction of a reallocation, and I'd discount the size of the promised gain before taking it to Finance.</p>
+<h3>Demo: try it yourself</h3>
+<p>The demo uses a 20% cut. Each slider sets a channel's spend from 50% to 150% of plan, the same guardrails the optimizer uses. The figures are made up.</p>
+<div id="sim"></div>
+<h3>Demo: what the model got wrong</h3>
+<p>Total media leads came in at 711 a week against a true 850, and channel estimates were noisier than the total. Email is the clearest miss. The model put its saturation point at about 20K a week against a true 7K, believed the channel had room to grow, and gave it the largest increase the guardrails allow. That's the kind of move I'd validate with a geo test before committing to it.</p>
+<div class="tablewrap"><table><thead><tr><th>Channel</th><th class="n">True carryover</th><th class="n">Fitted</th><th class="n">True leads/week</th><th class="n">Fitted</th><th class="n wideonly">True half-saturation</th><th class="n wideonly">Fitted</th></tr></thead><tbody><tr><td>Paid search</td><td class="n">0.10</td><td class="n">0.09</td><td class="n">310</td><td class="n">242</td><td class="n wideonly">38K</td><td class="n wideonly">40K</td></tr><tr><td>Paid social</td><td class="n">0.35</td><td class="n">0.34</td><td class="n">186</td><td class="n">159</td><td class="n wideonly">52K</td><td class="n wideonly">57K</td></tr><tr><td>Display</td><td class="n">0.30</td><td class="n">0.19</td><td class="n">53</td><td class="n">37</td><td class="n wideonly">42K</td><td class="n wideonly">40K</td></tr><tr><td>CTV</td><td class="n">0.65</td><td class="n">0.65</td><td class="n">221</td><td class="n">227</td><td class="n wideonly">110K</td><td class="n wideonly">113K</td></tr><tr><td>Email</td><td class="n">0.15</td><td class="n">0.14</td><td class="n">80</td><td class="n">46</td><td class="n wideonly">7K</td><td class="n wideonly">20K</td></tr></tbody></table></div>
+<h3>The code</h3>
+<p>The two transformations at the center of the model, from the repo:</p>
+<pre><code>def adstock(x, decay):
+    #carryover: this week&#x27;s effective spend includes a decayed share of last week&#x27;s
+    out = np.zeros_like(x, dtype=float)
+    carry = 0.0
+    for i, value in enumerate(x):
+        carry = value + decay * carry
+        out[i] = carry
+    return out
+
+def hill(x, half_sat, shape):
+    #diminishing returns: 0 at no spend, 0.5 at half_sat, approaches 1
+    x = np.maximum(x, 1e-9)
+    return x**shape / (x**shape + half_sat**shape)</code></pre>
+<p><a href="https://github.com/DaveNorine1/Portfolio/tree/main/projects/media-mix-budget-cut">See the full model, optimizer, and tests on GitHub</a></p>
+<p class="next">Next: <a href="signal-loss.html">Rebuilding measurement after losing most of our tracking</a></p>
+</article>
+</div></main>
+<footer class="wrap">Dave Norine, Plymouth, Minnesota. <a href="mailto:davidnorine@gmail.com">davidnorine@gmail.com</a></footer>
+<script src="../assets/charts.js?v=2"></script><script>
+const f1=v=>v.toFixed(0);
+lineChart('bt',{x:[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26],xName:'Holdout week',xTitle:'Holdout week',fmt:f1,label:'Actual and predicted weekly leads over the 26-week holdout',
+ series:[{name:'Actual',color:'--s2',values:[1583.7, 1550.8, 1610.8, 1597.0, 1604.8, 1541.3, 1575.8, 1523.2, 1466.8, 1495.8, 1365.1, 1329.0, 1282.7, 1327.3, 1444.2, 1365.6, 1383.6, 1410.0, 1413.5, 1402.5, 1366.0, 1382.8, 1284.2, 1205.8, 1184.0, 1252.9]},{name:'Model forecast',color:'--s1',values:[1522.6, 1590.7, 1575.5, 1595.6, 1603.3, 1528.6, 1566.0, 1552.7, 1454.3, 1473.3, 1364.6, 1287.4, 1247.2, 1321.7, 1391.9, 1400.2, 1404.3, 1437.5, 1444.2, 1378.2, 1360.9, 1337.7, 1271.8, 1233.8, 1192.2, 1209.0]}]});
+const p=v=>(v>0?'+':'')+(v*100).toFixed(1)+'%';
+rangeChart('sc',{label:'Change in weekly leads under two 20 percent cuts',fmt:p,labelW:170,legend:'<span><i style="background:var(--s1)"></i>Model estimate and 95% range</span><span><i style="background:var(--s2)"></i>Known truth (diamond)</span>',
+ rows:[{label:'Cut every channel 20%',mid:-0.05287515525777042,low:-0.05816480507539908,high:-0.04692715577996473,truth:-0.05630640254407504},
+ {label:"Model's reallocation",mid:-0.03253618882522824,low:-0.0446736956542767,high:-0.020997094562272514,truth:-0.042661139029062434}]});
+budgetSim('sim',{names:["Paid search", "Paid social", "Display", "CTV", "Email"],sim:{"baseline": 805.7324218279365, "shape": 1.5, "beta": [338.15257902578117, 234.62931012260424, 65.91244807752292, 310.77820326096554, 158.532527490375], "decay": [0.085424551598568, 0.33837606595770625, 0.18876779256982248, 0.6502254231829149, 0.14071014691377387], "half_sat": [40280.710056409116, 57172.627973633, 39797.73528298426, 113134.46262596597, 19917.711547216655], "current": [68387.3550051666, 62145.89844803601, 37737.43363743049, 76759.93144142396, 9418.185492234803], "weekly_total": 1516.7263170931747},opt:[62091.6707788017, 48355.84947676898, 18868.716818715253, 60115.527906795345, 14127.278238352197]});
+</script>
+</body></html>

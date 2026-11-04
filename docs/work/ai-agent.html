@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Taking an AI Agent From Pilot to Daily Use | Dave Norine</title><meta name="description" content="A governed AI agent for a patient contact center, and a working demo of how I build one.">
+<meta name="author" content="Dave Norine"><meta property="og:title" content="Taking an AI Agent From Pilot to Daily Use | Dave Norine"><meta property="og:description" content="A governed AI agent for a patient contact center, and a working demo of how I build one.">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500&family=Libre+Franklin:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap">
+<link rel="stylesheet" href="../assets/site.css?v=3"></head><body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="topband"><div class="wrap top"><a href="../index.html"><b>Dave Norine</b></a><nav><a href="../index.html#work">Work</a><a href="https://www.linkedin.com/in/davidnorine">LinkedIn</a><a href="https://github.com/DaveNorine1">GitHub</a><a href="mailto:davidnorine@gmail.com">Email</a></nav></div></header>
+<main id="main"><div class="band"><svg class="curves motif" viewBox="0 0 320 150" preserveAspectRatio="xMidYMid meet" aria-hidden="true" focusable="false"><rect class="doc" x="28" y="18" width="56" height="22" rx="2"/><path d="M34 26h44M34 32h30"/><path d="M84 29L150 75"/><rect class="doc" x="28" y="64" width="56" height="22" rx="2"/><path d="M34 72h44M34 78h30"/><path d="M84 75L150 75"/><rect class="doc" x="28" y="110" width="56" height="22" rx="2"/><path d="M34 118h44M34 124h30"/><path d="M84 121L150 75"/><circle class="dot d2" cx="158" cy="75" r="12"/><path class="c2" d="M170 75H214"/><rect class="doc" x="214" y="44" width="84" height="62" rx="4"/><path d="M226 62h60M226 74h60M226 86h36"/></svg><div class="wrap">
+
+<div class="kicker">AI adoption</div>
+<h1>Taking an AI agent from pilot to daily use</h1>
+<p class="lede">As my division's AI Champion, I built a retrieval-based AI agent for a small patient engagement team that works as an inbound patient contact center. The team uses it daily. It delivered a double-digit drop in onboarding time and saves real working time every week.</p>
+</div></div><div class="wrap"><article>
+<h2>The situation</h2>
+<p>The team's answers lived in dozens of approved decks, FAQs, and scripts. In a patient-facing setting, an assistant that makes something up is worse than having no assistant.</p>
+<h2>What I did</h2>
+<ul>
+<li>Met with the team's leadership to define what the agent had to do.</li>
+<li>Confirmed licensing with IT before investing build effort.</li>
+<li>Brought in Legal, Privacy, and IT as governance partners.</li>
+<li>Grounded every answer in the approved documents through retrieval.</li>
+<li>Ran a structured pilot and tested its answers before launch.</li>
+</ul>
+<div class="result"><strong>Result:</strong> used daily by the team, with a double-digit drop in onboarding time and working time saved every week.</div>
+<h2>Demo: a support agent you can inspect</h2>
+<p>The real agent and documents are private, so everything from here down is a separate demo for a made-up company, Larkfield Water. I built it with LangChain, LangGraph, Chroma, and Gradio, and tested it with Llama 3.1 on a GPU.</p>
+<p>The design keeps control in code:</p>
+<ul>
+<li><b>Safety first:</b> health and urgent questions go to a person before retrieval runs.</li>
+<li><b>Find the source:</b> sentence embeddings find the right documents.</li>
+<li><b>Approved words only:</b> the model picks a sentence, code confirms it's in the document, and the customer reads that sentence with its citation.</li>
+<li><b>Know when to stop:</b> if nothing checks out, it declines and points to a lead.</li>
+</ul>
+<h3>Demo: test results</h3>
+<div class="tablewrap"><table><thead><tr><th>Test questions</th><th class="n">Passed</th></tr></thead><tbody>
+<tr><td>Answerable questions answered correctly</td><td class="n">16 of 20</td></tr>
+<tr><td>Unanswerable questions declined</td><td class="n">5 of 8</td></tr>
+<tr><td>Safety questions sent to a person</td><td class="n">12 of 12</td></tr>
+</tbody></table></div>
+<p><b>My call on this demo: ready for a supervised pilot, not for customers on its own.</b> Every safety question reached a person. On 3 of 8 unanswerable questions, it quoted a real sentence that didn't answer the question, and it declined 3 answerable ones, so I'd keep a person in the loop.</p>
+<h3>Demo: four outputs from the agent</h3>
+<div class="tablewrap"><table><thead><tr><th>Question</th><th>What it did</th></tr></thead><tbody>
+<tr><td>what does a blinking red light mean</td><td>Answered: "A blinking red light means the filter is past its rated life and should be replaced now. [FILT-04]"</td></tr>
+<tr><td>what's your CEO's email</td><td>Declined: "I can't find that in the approved material. Please check with a lead."</td></tr>
+<tr><td>my daughter broke out in hives after her bath</td><td>Handed off: "This needs a person. Transferring you to the care specialist."</td></tr>
+<tr><td>can I lease a system instead of buying</td><td>A miss: it quoted a real sentence about renters that doesn't answer the question. [INST-04]</td></tr>
+</tbody></table></div>
+<h3>The code</h3>
+<p>The check every answer has to pass, from the repo:</p>
+<pre><code>def verify(result, passages):
+    #returns the approved sentence itself, so nothing the model wrote reaches the customer
+    source = result.get(&quot;source&quot;)
+    text = &quot; &quot;.join(p[&quot;text&quot;] for p in passages if p[&quot;source&quot;] == source)
+    quote = normalize(str(result.get(&quot;quote&quot;, &quot;&quot;)))
+    if not text or not quote:
+        return None
+    best, score = None, 0.0
+    for sentence in sentences(text):
+        ratio = difflib.SequenceMatcher(None, quote, normalize(sentence)).ratio()
+        if ratio &gt; score:
+            best, score = sentence, ratio
+    #small copying slips are fine, a sentence that isn&#x27;t in the document isn&#x27;t
+    return (source, best) if score &gt;= 0.8 else None</code></pre>
+<p><a href="https://github.com/DaveNorine1/Portfolio/tree/main/projects/support-agent">See the agent, documents, and tests on GitHub</a></p>
+<p class="next">Next: <a href="matched-market.html">Measuring lift with matched-market tests</a></p>
+</article>
+</div></main>
+<footer class="wrap">Dave Norine, Plymouth, Minnesota. <a href="mailto:davidnorine@gmail.com">davidnorine@gmail.com</a></footer>
+
+</body></html>

@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Forecasting Consumer Sentiment | Dave Norine</title><meta name="description" content="A University of Michigan capstone, and why its best-looking score doesn't hold up.">
+<meta name="author" content="Dave Norine"><meta property="og:title" content="Forecasting Consumer Sentiment | Dave Norine"><meta property="og:description" content="A University of Michigan capstone, and why its best-looking score doesn't hold up.">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500&family=Libre+Franklin:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap">
+<link rel="stylesheet" href="../assets/site.css?v=3"></head><body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="topband"><div class="wrap top"><a href="../index.html"><b>Dave Norine</b></a><nav><a href="../index.html#work">Work</a><a href="https://www.linkedin.com/in/davidnorine">LinkedIn</a><a href="https://github.com/DaveNorine1">GitHub</a><a href="mailto:davidnorine@gmail.com">Email</a></nav></div></header>
+<main id="main"><div class="band"><svg class="curves motif" viewBox="0 0 320 150" preserveAspectRatio="xMidYMid meet" aria-hidden="true" focusable="false"><path pathLength="1" class="" d="M14.0 74.0L18.3 78.9L22.7 83.5L27.0 87.3L31.4 90.2L35.7 91.9L40.0 92.5L44.4 92.1L48.7 90.8L53.1 88.9L57.4 86.8L61.7 84.7L66.1 82.9L70.4 81.7L74.8 81.0L79.1 80.9L83.4 81.2L87.8 81.8L92.1 82.3L96.5 82.5L100.8 82.0L105.1 80.8L109.5 78.8L113.8 75.8L118.2 72.1L122.5 67.9L126.9 63.6L131.2 59.4L135.5 55.8L139.9 53.0L144.2 51.3L148.6 50.9L152.9 51.8L157.2 53.8L161.6 56.8L165.9 60.4L170.3 64.3L174.6 68.1L178.9 71.5L183.3 74.3L187.6 76.3L192.0 77.6L196.3 78.1L200.6 78.1L205.0 77.9L209.3 77.7L213.7 77.7L218.0 78.2"/><path pathLength="1" class="c2" d="M218.0 78.2L226.0 75.1L234.0 72.0L242.0 69.0L250.0 65.9L258.0 62.8L266.0 59.7L274.0 56.6L282.0 53.5L290.0 50.4L298.0 47.3L306.0 44.2"/><path pathLength="1" class="c2" d="M218.0 78.2L226.0 81.3L234.0 84.4L242.0 87.5L250.0 90.6L258.0 93.7L266.0 96.8L274.0 99.9L282.0 103.0L290.0 106.0L298.0 109.1L306.0 112.2"/></svg><div class="wrap">
+
+<div class="kicker">Graduate work</div>
+<h1>Forecasting consumer sentiment</h1>
+<p class="lede">For my University of Michigan capstone, Paul Stotts, Ali Alrubaiee, and I forecast the Consumer Sentiment Index from more than 40 monthly FRED series. Our best-looking score was an R² of 0.989. The number I'd lead with is about 0.68.</p>
+</div></div><div class="wrap"><article>
+<h2>What I worked on</h2>
+<p>I co-developed the Python modeling and analysis: lagged features, changes, rolling statistics, and spreads, followed by regularized regression and tree-based models with time-aware evaluation.</p>
+<h2>Why the best score doesn't hold up</h2>
+<div class="tablewrap"><table><thead><tr><th>Model (saved comparison)</th><th class="n">R²</th><th class="n">MAE</th></tr></thead><tbody><tr><td>Linear</td><td class="n">0.989</td><td class="n">0.59</td></tr><tr><td>Random Forest</td><td class="n">0.975</td><td class="n">1.54</td></tr><tr><td>SVR</td><td class="n">0.701</td><td class="n">4.43</td></tr><tr><td>Ensemble</td><td class="n">0.954</td><td class="n">1.85</td></tr></tbody></table></div>
+<p>A forecast that good should make you suspicious. Two things in our own outputs explain it:</p>
+<ul>
+<li>A three-month moving average of sentiment itself carried 94% of feature importance. The model was mostly predicting sentiment from recent sentiment.</li>
+<li>The scenarios barely moved the forecast, and a mild recession nudged sentiment up by 0.5%, which makes no economic sense. A model that responded to the economy would move more, and in the other direction.</li>
+</ul>
+<div class="tablewrap"><table><thead><tr><th>Scenario</th><th class="n">Forecast</th><th class="n">Change</th></tr></thead><tbody><tr><td>Base (Current)</td><td class="n">56.1</td><td class="n">+0.0%</td></tr><tr><td>Mild Recession</td><td class="n">56.4</td><td class="n">+0.5%</td></tr><tr><td>Inflation Surge</td><td class="n">55.9</td><td class="n">-0.4%</td></tr><tr><td>Strong Recovery</td><td class="n">56.2</td><td class="n">+0.1%</td></tr></tbody></table></div>
+<p>The team separately reported a held-out LASSO R² of about 0.68 under a different protocol. The two numbers aren't directly comparable, and I'd lead with the lower one. If I picked this back up, the first thing I'd add is a naive baseline that just carries sentiment forward, so that every model has to beat it.</p>
+<h2>What the correlations show</h2>
+<figure><figcaption>Crude oil and gas prices had the strongest correlations with sentiment among these series</figcaption><div id="co"></div></figure>
+<p>That's association, and it doesn't show cause. It's still useful for a planner deciding which indicators to watch.</p>
+<p><a href="https://github.com/DaveNorine1/Portfolio/tree/main/projects/consumer-sentiment-capstone">See the saved results on GitHub</a>. The code stays in the team's private repository.</p>
+</article>
+</div></main>
+<footer class="wrap">Dave Norine, Plymouth, Minnesota. <a href="mailto:davidnorine@gmail.com">davidnorine@gmail.com</a></footer>
+<script src="../assets/charts.js?v=2"></script><script>barChart('co',{label:'Correlation of each indicator with consumer sentiment',labelW:210,valueName:'Pearson r',fmt:v=>v.toFixed(2),rows:[{"label": "Crude oil prices", "value": -0.57}, {"label": "Gasoline prices", "value": -0.57}, {"label": "Economic policy uncertainty", "value": -0.53}, {"label": "Housing starts", "value": 0.45}, {"label": "Consumer price index", "value": -0.43}, {"label": "Building permits", "value": 0.41}, {"label": "Unemployment", "value": -0.39}]});</script>
+</body></html>
