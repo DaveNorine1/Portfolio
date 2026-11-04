@@ -2,7 +2,21 @@
 
 A decoder-only Transformer written from scratch in PyTorch, with the instrumentation to treat training as a GPU benchmark: causal attention, mixed precision, gradient accumulation, checkpointing, CUDA event timing, step-latency distributions, tokens per second, memory, and power.
 
-**Status:** the code is complete and a full benchmark run is still to come. Results will be added here once that run is finished.
+## Results
+
+Run on an NVIDIA A100 (80GB) in Google Colab: a 202M-parameter model, 16 layers, BF16 mixed precision, 10,000 optimizer steps on Tiny Shakespeare, in about 76 minutes. Metrics are in `results/`.
+
+| Measure | Result |
+|---|---|
+| Training throughput | about 113,000 tokens per second |
+| Median optimizer step | 435 ms (standard deviation 2.7 ms) |
+| Tokens processed | 491.5 million |
+| Mean GPU utilization | 98% |
+| Peak VRAM | 10.7 GB of 79 GB |
+| Best validation loss | 1.58, at step 750 |
+| Final loss | training 0.03, validation 4.69 |
+
+The hardware numbers are the point of this run. The model is far too large for this small dataset and overfits almost immediately, so it's a stress test and not a useful text generator. For real generation, I'd stop near step 750, use a smaller model, or train on more data.
 
 ## Run it
 

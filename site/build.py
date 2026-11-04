@@ -59,6 +59,7 @@ MOTIFS = {
     "building-the-team": "".join(f'<circle class="dot" cx="{x}" cy="{y}" r="7"/>' for x, y in _dots) + '<path class="c2" d="M100 75H160M150 65l10 10l-10 10"/>' + "".join(f'<circle class="dot{" d2" if (i % 5 == 0) else ""}" cx="{x}" cy="{y}" r="7"/>' for i, (x, y) in enumerate(_grown)),
     "consumer-sentiment": _line(lambda t: _wave(t, 16, 1.6, 74) if t < 0.7 else _wave(0.7, 16, 1.6, 74) + (t - 0.7) * 24) + _line(lambda t: _wave(0.7, 16, 1.6, 74) + (t - 0.7) * 24 - (t - 0.7) * 60 if t > 0.7 else _wave(0.7, 16, 1.6, 74), "c2", x0=218) + _line(lambda t: _wave(0.7, 16, 1.6, 74) + (t - 0.7) * 24 + (t - 0.7) * 60 if t > 0.7 else _wave(0.7, 16, 1.6, 74), "c2", x0=218),
 }
+MOTIFS["gpt-benchmark"] = _line(lambda t: 30 + 100 * (1 - 2.718 ** (-t * 9)), "") + _line(lambda t: 30 + 62 * (1 - 2.718 ** (-t * 14)) - 42 * max(0, t - 0.12), "c2")
 MOTIFS["catering"] = (
     '<rect class="doc" x="18" y="54" width="62" height="42" rx="3"/><path d="M18 56l31 22l31-22"/><path d="M80 75H118"/><circle class="dot d2" cx="130" cy="75" r="12"/>'
     + "".join(f'<path d="M142 75L188 {y}"/><rect class="doc" x="188" y="{y - 15}" width="46" height="30" rx="3"/>' for y in (28, 75, 122))
@@ -97,7 +98,7 @@ def page(title, description, body, depth=0, script="", art=None):
 <link rel="icon" href="{up}favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500&family=Libre+Franklin:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap">
-<link rel="stylesheet" href="{up}assets/site.css?v=3"></head><body>
+<link rel="stylesheet" href="{up}assets/site.css?v=4"></head><body>
 <a class="skip" href="#main">Skip to content</a>
 <header class="topband"><div class="{w} top"><a href="{up}index.html"><b>Dave Norine</b></a><nav><a href="{up}index.html#work">Work</a><a href="{LINKEDIN}">LinkedIn</a><a href="{GITHUB}">GitHub</a><a href="mailto:{EMAIL}">Email</a></nav></div></header>
 <main id="main"><div class="band">{graphic}<div class="{w}">{head}</div></div><div class="{w}">{rest}</div></main>
@@ -140,10 +141,10 @@ home = f"""
 </div>
 <h2>Code</h2>
 <div class="codes">
-<a class="span2" href="{REPO}/support-agent"><h3>Conversational support agent</h3><code>LangGraph agent, Chroma, citations, safety routing, memory</code><span>LangChain, Gradio</span></a>
+<a href="{REPO}/support-agent"><h3>Conversational support agent</h3><code>LangGraph agent, Chroma, citations, safety routing, memory</code><span>LangChain, Gradio</span></a>
 <a href="{REPO}/media-mix-budget-cut"><h3>Media mix model</h3><code>adstock() hill() optimize_budget()</code><span>Python, SciPy</span></a>
 <a href="{REPO}/matched-market-test"><h3>Matched-market test</h3><code>match_pairs() normal_posterior()</code><span>Python, SciPy</span></a>
-<a href="{REPO}/gpt-training-lab"><h3>GPT from scratch</h3><code>causal attention, CUDA timing</code><span>PyTorch</span></a>
+<a href="work/gpt-benchmark.html"><h3>GPT from scratch</h3><code>113K tokens/sec on an A100</code><span>PyTorch, CUDA</span></a>
 <a href="work/consumer-sentiment.html"><h3>Forecasting consumer sentiment</h3><code>model comparison, scenarios</code><span>University of Michigan capstone</span></a>
 </div>
 </section>
@@ -366,6 +367,49 @@ team = """
 </article>
 """
 
+# ---------- gpt
+_nb = json.loads((ROOT / "projects/gpt-training-lab/notebooks/gpt_training_benchmark.ipynb").read_text())
+_src = "\n".join("".join(c["source"]) for c in _nb["cells"] if c["cell_type"] == "code")
+_tree = ast.parse(_src)
+_cls = next(n for n in _tree.body if isinstance(n, ast.ClassDef) and "attention" in n.name.lower())
+gpt_snippet = "<pre><code>" + html.escape("\n".join(_src.splitlines()[_cls.lineno - 1:_cls.end_lineno])) + "</code></pre>"
+ev = list(csv.DictReader(open(ROOT / "projects/gpt-training-lab/results/evaluation_metrics.csv")))
+gpt = f"""
+<article class="hero">
+<div class="kicker">Hands-on deep learning</div>
+<h1>GPT from scratch, with GPU instrumentation</h1>
+<p class="lede">I wrote a decoder-only Transformer in PyTorch and instrumented its training as a GPU benchmark. On an A100, the 202-million-parameter model trained at about 113,000 tokens per second, holding that pace for all 10,000 steps.</p>
+<!--endband-->
+<h2>What I built</h2>
+<ul>
+<li>Causal self-attention, Transformer blocks, and the full training loop, written directly in PyTorch.</li>
+<li>Mixed precision, gradient accumulation, checkpointing, and model sizes that adapt to available GPU memory.</li>
+<li>CUDA event timing, step-latency distributions, and GPU utilization, power, and temperature logging.</li>
+</ul>
+<h2>Benchmark results</h2>
+<div class="tablewrap"><table><tbody>
+<tr><td>GPU</td><td class="n">NVIDIA A100, 80GB</td></tr>
+<tr><td>Model</td><td class="n">202M parameters, 16 layers</td></tr>
+<tr><td>Training throughput</td><td class="n">about 113,000 tokens/sec</td></tr>
+<tr><td>Median optimizer step</td><td class="n">435 ms</td></tr>
+<tr><td>Step-time standard deviation</td><td class="n">2.7 ms</td></tr>
+<tr><td>Tokens processed</td><td class="n">491.5 million</td></tr>
+<tr><td>Mean GPU utilization</td><td class="n">98%</td></tr>
+<tr><td>Peak VRAM</td><td class="n">10.7 GB of 79 GB</td></tr>
+<tr><td>Run time</td><td class="n">about 76 minutes</td></tr>
+</tbody></table></div>
+<h2>What the loss curve says</h2>
+<figure><figcaption>Validation loss bottoms out at 1.58 around step 750, then climbs as the model memorizes the data</figcaption><div id="ls"></div></figure>
+<p>This is a stress test and not a useful text generator. A model this size memorizes a small dataset like Tiny Shakespeare, so training loss reached 0.03 while validation loss rose to 4.69. For real generation, I'd stop near step 750, use a smaller model, or train on much more data.</p>
+<h3>The code</h3>
+{gpt_snippet}
+<p><a href="{REPO}/gpt-training-lab">See the full notebook and results on GitHub</a></p>
+<p class="next">More: <a href="consumer-sentiment.html">Forecasting consumer sentiment</a></p>
+</article>
+"""
+gpt_js = "const f=v=>v.toFixed(2);lineChart('ls',{{x:%s,xName:'Step',xTitle:'Optimizer step',fmt:f,ymin:0,label:'Training and validation loss by optimizer step',series:[{{name:'Validation loss',color:'--s2',values:%s}},{{name:'Training loss',color:'--s1',values:%s}}]}});".replace("{{", "{").replace("}}", "}") % (
+    json.dumps([int(r["step"]) for r in ev]), json.dumps([round(float(r["val_loss"]), 3) for r in ev]), json.dumps([round(float(r["train_loss"]), 3) for r in ev]))
+
 # ---------- catering
 catering = """
 <article class="hero">
@@ -434,6 +478,7 @@ pages = [
     ("matched-market", "Measuring Lift With Matched-Market Tests", "How to design a geo test and turn the read into a scale-or-stop decision.", market, geo_js),
     ("building-the-team", "Building the Team", "Building a small support team into a full analytics team, and two practices before it.", team, ""),
     ("catering", "Automating Catering Inquiries, With Approval", "A human-approved AI workflow that reads catering inquiries, drafts replies, tracks details, and holds calendar events.", catering, ""),
+    ("gpt-benchmark", "GPT From Scratch, With GPU Instrumentation", "A from-scratch Transformer in PyTorch, benchmarked at about 113,000 tokens per second on an A100.", gpt, gpt_js),
     ("consumer-sentiment", "Forecasting Consumer Sentiment", "A University of Michigan capstone, and why its best-looking score doesn't hold up.", capstone, cap_js),
 ]
 for slug, title, desc, body, script in pages:

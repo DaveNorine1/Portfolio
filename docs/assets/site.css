@@ -123,3 +123,6 @@ pre{overflow-x:auto;background:var(--surface);border:1px solid var(--line);paddi
 @media (max-width:560px){.facts{grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}.facts b{font-size:1.1rem}.facts span{font-size:12.5px}.edu{gap:12px}.edu .logo{height:26px;width:auto;max-width:none}.edu b{font-size:1rem}}
 .edu .resume{margin-left:auto;font:500 15.5px/1.4 var(--head);white-space:nowrap}
 @media (max-width:620px){.edu{flex-wrap:wrap}.edu .resume{margin-left:0;flex-basis:100%;padding-block:8px}}
+.codes{grid-template-columns:repeat(6,minmax(0,1fr))}.codes a{grid-column:span 2}.codes a:nth-child(n+4){grid-column:span 3}
+@media (max-width:900px){.codes{grid-template-columns:repeat(2,minmax(0,1fr))}.codes a,.codes a:nth-child(n+4){grid-column:auto}.codes a:last-child{grid-column:span 2}}
+@media (max-width:560px){.codes{grid-template-columns:minmax(0,1fr)}.codes a,.codes a:nth-child(n+4),.codes a:last-child{grid-column:auto}}
